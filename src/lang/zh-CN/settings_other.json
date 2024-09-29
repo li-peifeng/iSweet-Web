@@ -7,5 +7,7 @@
   "reset_token_success": "重置令牌成功",
   "unknown_type": "未知类型",
   "set_qbit": "设置 qBittorrent",
-  "qbittorrent": "qBittorrent"
+  "qbittorrent": "qBittorrent",
+  "transmission": "Transmission",
+  "set_transmission": "设置 Transmission"
 }

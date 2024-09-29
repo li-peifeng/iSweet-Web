@@ -100,6 +100,8 @@
   "sso_organization_name": "单点登录组织名称",
   "text_types": "文本类型",
   "token": "令牌",
+  "transmission_seedtime": "做种时间",
+  "transmission_uri": "URL",
   "version": "版本",
   "video_autoplay": "自动播放视频",
   "video_types": "视频类型",
