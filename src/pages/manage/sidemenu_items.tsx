@@ -96,11 +96,13 @@ export const side_menu_items: SideMenuItem[] = [
     title: "manage.sidemenu.tasks",
     icon: OcWorkflow2,
     to: "/@manage/tasks",
+    role: UserRole.GENERAL,
     children: [
       {
         title: "manage.sidemenu.offline_download",
         icon: IoMagnetOutline,
         to: "/@manage/tasks/aria2",
+        role: UserRole.GENERAL,
         component: lazy(() => import("./tasks/offline_download")),
       },
       // {
@@ -119,12 +121,14 @@ export const side_menu_items: SideMenuItem[] = [
         title: "manage.sidemenu.upload",
         icon: BsCloudUploadFill,
         to: "/@manage/tasks/upload",
+        role: UserRole.GENERAL,
         component: lazy(() => import("./tasks/Upload")),
       },
       {
         title: "manage.sidemenu.copy",
         icon: IoCopy,
         to: "/@manage/tasks/copy",
+        role: UserRole.GENERAL,
         component: lazy(() => import("./tasks/Copy")),
       },
     ],

@@ -14,7 +14,7 @@ export interface TasksProps {
 export const Tasks = (props: TasksProps) => {
   const t = useT()
   const [loading, get] = useFetch(
-    (): PResp<TaskInfo[]> => r.get(`/admin/task/${props.type}/${props.done}`),
+    (): PResp<TaskInfo[]> => r.get(`/task/${props.type}/${props.done}`),
   )
   const [tasks, setTasks] = createSignal<TaskInfo[]>([])
   const refresh = async () => {
@@ -36,13 +36,13 @@ export const Tasks = (props: TasksProps) => {
     onCleanup(() => clearInterval(interval))
   }
   const [clearDoneLoading, clearDone] = useFetch(
-    (): PEmptyResp => r.post(`/admin/task/${props.type}/clear_done`),
+    (): PEmptyResp => r.post(`/task/${props.type}/clear_done`),
   )
   const [clearSucceededLoading, clearSucceeded] = useFetch(
-    (): PEmptyResp => r.post(`/admin/task/${props.type}/clear_succeeded`),
+    (): PEmptyResp => r.post(`/task/${props.type}/clear_succeeded`),
   )
   const [retryFailedLoading, retryFailed] = useFetch(
-    (): PEmptyResp => r.post(`/admin/task/${props.type}/retry_failed`),
+    (): PEmptyResp => r.post(`/task/${props.type}/retry_failed`),
   )
   const [page, setPage] = createSignal(1)
   const pageSize = 20

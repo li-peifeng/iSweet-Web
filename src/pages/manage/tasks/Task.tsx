@@ -43,6 +43,13 @@ const StateMap: Record<
   [TaskStateEnum.Succeeded]: "success",
   [TaskStateEnum.Canceled]: "neutral",
 }
+
+const Creator = (props: { name: string; role: number }) => {
+  if (props.role < 0) return null
+  const roleColors = ["info", "neutral", "accent"]
+  return <Badge colorScheme={roleColors[props.role] as any}>{props.name}</Badge>
+}
+
 export const TaskState = (props: { state: number }) => {
   const t = useT()
   return (
@@ -58,10 +65,10 @@ export const Task = (props: TaskInfo & TasksProps) => {
   const canRetry = props.done === "done" && props.state === TaskStateEnum.Failed
   const [operateLoading, operate] = useFetch(
     (): PEmptyResp =>
-      r.post(`/admin/task/${props.type}/${operateName}?tid=${props.id}`),
+      r.post(`/task/${props.type}/${operateName}?tid=${props.id}`),
   )
   const [retryLoading, retry] = useFetch(
-    (): PEmptyResp => r.post(`/admin/task/${props.type}/retry?tid=${props.id}`),
+    (): PEmptyResp => r.post(`/task/${props.type}/retry?tid=${props.id}`),
   )
   const [deleted, setDeleted] = createSignal(false)
   return (
@@ -85,6 +92,7 @@ export const Task = (props: TaskInfo & TasksProps) => {
           >
             {props.name}
           </Heading>
+          <Creator name={props.creator} role={props.creator_role} />
           <TaskState state={props.state} />
           <Text
             css={{
