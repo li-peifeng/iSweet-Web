@@ -73,7 +73,7 @@
     "hls.js": "^1.2.1",
     "just-once": "^2.2.0",
     "libass-wasm": "^4.1.0",
-    "sweetphotos": "^2024.6.26",
+    "sweetphotos": "^2024.11.27",
     "mark.js": "^8.11.1",
     "mitt": "^3.0.0",
     "rehype-katex": "^6.0.3",
