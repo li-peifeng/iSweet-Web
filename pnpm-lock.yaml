@@ -114,8 +114,8 @@ importers:
         specifier: ^2.0.6
         version: 2.0.6
       sweetphotos:
-        specifier: ^2024.11.27
-        version: 2024.11.27
+        specifier: ^2.8.2
+        version: 2.8.2
       typescript-natural-sort:
         specifier: ^0.7.2
         version: 0.7.2
@@ -1740,8 +1740,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  sweetphotos@2024.11.27:
-    resolution: {integrity: sha512-peVQbaFDNK+6p6hCTaVJqWRc+HKrWbhPGWXF49II86uGTBaWpL8TDR021dOy0yDwFs8QOCTqfO7rJvOiG/IrNQ==}
+  sweetphotos@2.8.2:
+    resolution: {integrity: sha512-FwoSzwoTYw3MBVPoFdiHpMTCkEnvb0RnIUFdnjkHN3zvIvhZFoP+TUcbCqEDQmolpusF/kntkwCO9jE5dKwGJw==}
     engines: {node: '>=6.0.0'}
 
   systemjs@6.12.3:
@@ -3704,7 +3704,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  sweetphotos@2024.11.27: {}
+  sweetphotos@2.8.2: {}
 
   systemjs@6.12.3: {}
 
