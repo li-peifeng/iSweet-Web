@@ -1,5 +1,5 @@
 .hope-ui-light #canvas-basic {
-  background: #e8f0fa;
+  background-image: linear-gradient(#e8f0fa, #ffd0d0, #e8f0fa);
   position: fixed;
   display: block;
   width: 100%;
@@ -12,7 +12,7 @@
 }
 
 .hope-ui-dark #canvas-basic {
-  background: #0c141e;
+  background-image: linear-gradient(#0c141e, #343c46, #0c141e);
   position: fixed;
   display: block;
   width: 100%;
@@ -104,7 +104,7 @@
 }
 
 .hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-ifjOQLV-css {
-  background-color: #ffffff7f !important;
+  background-color: #ffffff4d !important;
 }
 
 .obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
