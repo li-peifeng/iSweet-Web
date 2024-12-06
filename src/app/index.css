@@ -1,10 +1,5 @@
 .hope-ui-light #canvas-basic {
-  background-image: linear-gradient(
-    #ffffff,
-    #ffdedecc 33%,
-    #deffdecc 66%,
-    #ffffff
-  );
+  background: #e8f0fa;
   position: fixed;
   display: block;
   width: 100%;
@@ -17,7 +12,7 @@
 }
 
 .hope-ui-dark #canvas-basic {
-  background-image: linear-gradient(#000000, #004810, #002408, #000000);
+  background: #0c141e);
   position: fixed;
   display: block;
   width: 100%;
