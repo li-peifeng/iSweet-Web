@@ -245,10 +245,8 @@
   },
   "BaiduPhoto": {
     "album_id": "相簿ID",
-    "client_id": "客户端ID",
-    "client_secret": "客户端密钥",
+    "cookie": "Cookie",
     "delete_origin": "删除源文件",
-    "refresh_token": "刷新令牌",
     "show_type": "展示类型",
     "show_types": {
       "root": "根",
@@ -578,11 +576,6 @@
       "web": "网页"
     },
     "refresh_token": "刷新令牌",
-    "refresh_token_method": "刷新令牌方法",
-    "refresh_token_methods": {
-      "http": "Http",
-      "oauth2": "Oauth2"
-    },
     "root_folder_id": "根文件夹ID",
     "use_low_latency_address": "使用低延迟地址",
     "username": "用户名"
