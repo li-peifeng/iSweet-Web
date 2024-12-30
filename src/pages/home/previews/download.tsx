@@ -49,7 +49,7 @@ export const Download = (props: { openWith?: boolean }) => {
             <PopoverArrow />
             <PopoverBody>
               <Image
-                maxWidth="300px"
+                maxWidth="156px"
                 src={qrUrl()}
                 alt="下载链接二维码"
                 objectFit="cover"
