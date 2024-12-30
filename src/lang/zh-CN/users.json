@@ -44,5 +44,14 @@
   "webauthn": "WebAuthn",
   "add_webauthn": "添加 Webauthn 凭据",
   "add_webauthn_success": "Webauthn 凭据添加成功！",
-  "webauthn_not_supported": "浏览器不支持或不安全"
+  "webauthn_not_supported": "浏览器不支持或不安全",
+  "ssh_keys": {
+    "heading": "SSH 密钥",
+    "add_heading": "添加新密钥",
+    "title": "标题",
+    "key": "密钥",
+    "fingerprint": "指纹码",
+    "last_used": "最后使用时间",
+    "operation": "操作"
+  }
 }
