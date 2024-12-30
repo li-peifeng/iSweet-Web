@@ -26,12 +26,9 @@ const Preview = () => {
     }
     const audio = {
       name: obj.name,
-      artist: "Unknown",
+      artist: "•••",
       url: rawLink(obj, true),
-      cover:
-        obj.thumb ||
-        getSetting("audio_cover") ||
-        "https://jsd.nn.ci/gh/alist-org/logo@main/logo.svg",
+      cover: getSetting("audio_cover") || "/images/audio.png",
       lrc: lrc,
     }
     if (objStore.provider === "NeteaseMusic") {

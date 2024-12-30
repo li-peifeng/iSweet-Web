@@ -1,7 +1,7 @@
 import { Grid } from "@hope-ui/solid"
 import { For } from "solid-js"
 import { GridItem } from "./GridItem"
-import "lightgallery/css/lightgallery-bundle.css"
+import "sweetphotos/css/lightgallery-bundle.css"
 import { local, objStore } from "~/store"
 import { useSelectWithMouse } from "./helper"
 

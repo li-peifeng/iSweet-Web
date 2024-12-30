@@ -1,18 +1,18 @@
 # replace version
-cd alist-web
+cd Sweet-Cloud-Web
 version=$(git describe --abbrev=0 --tags)
-sed -i -e "s/\"version\": \"0.0.0\"/\"version\": \"$version\"/g" package.json
+sed -i -e "s/\"version\": \"2024.0.0\"/\"version\": \"$version\"/g" package.json
 cat package.json
 
 # build
 pnpm install
-pnpm i18n:release
+node ./scripts/i18n.mjs
 pnpm build
 cp -r dist ../
 cd ..
 
 # commit to web-dist
-cd web-dist
+cd Sweet-Cloud-Dist
 rm -rf dist
 cp -r ../dist .
 git add .

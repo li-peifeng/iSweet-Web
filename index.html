@@ -1,29 +1,32 @@
-<!DOCTYPE html>
-<html lang="en" translate="no">
+<!doctype html>
+<html lang="zh-CN" translate="no">
   <head>
-    <!-- customize head -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="robots" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="referrer" content="same-origin" />
-    <meta name="generator" content="AList V3" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="google" content="notranslate" />
-    <link href="/static/manifest.json" rel="manifest" />
+    <meta name="apple-mobile-web-app-title" content="甜蜜云" />
+    <meta name="application-name" content="甜蜜云" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="AList" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link
       rel="apple-touch-icon"
-      href="https://jsd.nn.ci/gh/alist-org/logo@main/logo.png"
+      sizes="512x512"
+      href="images/apple-touch-icon.png"
     />
-    <script
-      src="https://g.alicdn.com/IMM/office-js/1.1.5/aliyun-web-office-sdk.min.js"
-      async
-    ></script>
-    <link
-      rel="shortcut icon"
-      type="image/ico"
-      href="https://jsd.nn.ci/gh/alist-org/logo@main/logo.svg"
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="manifest" href="static/manifest.json" />
+    <meta
+      name="theme-color"
+      content="#e8f0fa"
+      media="(prefers-color-scheme: light)"
     />
+    <meta
+      name="theme-color"
+      content="#0c141e"
+      media="(prefers-color-scheme: dark)"
+    />
+    <!-- customize head -->
     <title>Loading...</title>
     <script>
       window.ALIST = {
@@ -36,11 +39,12 @@
       window.__dynamic_base__ = window.ALIST.cdn || ""
     </script>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
     <script src="/src/main.tsx" type="module"></script>
+    <canvas id="canvas-basic"></canvas>
     <!-- customize body -->
   </body>
 </html>

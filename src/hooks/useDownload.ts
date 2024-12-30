@@ -20,7 +20,7 @@ function isNullOrUndefined(value: string | object): boolean {
 }
 
 async function getSaveDir(rpc_url: string, rpc_secret: string) {
-  let save_dir: string = "/downloads/alist"
+  let save_dir: string = "/downloads/sweet-cloud"
 
   const resp = await axios.post(rpc_url, {
     id: Math.random().toString(),
@@ -97,7 +97,7 @@ export const useDownload = () => {
         return
       }
       try {
-        let save_dir = "/downloads/alist"
+        let save_dir = "/downloads/sweet-cloud"
         // TODO: select dir, but it seems there is no way to get the full path
         // if (window.showDirectoryPicker) {
         //   const dirHandle = await window.showDirectoryPicker()
@@ -156,7 +156,7 @@ export const useDownload = () => {
         notify.success(t("home.toolbar.send_aria2_success"))
       } catch (e) {
         console.error(e)
-        notify.error(`failed to send to aria2: ${e}`)
+        notify.error(t("home.toolbar.aria2_set_error"))
       }
     },
     playlistDownloadSelected: () => {

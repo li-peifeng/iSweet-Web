@@ -1,6 +1,5 @@
 import {
   lazy,
-  Show,
   createEffect,
   createMemo,
   onCleanup,
@@ -15,16 +14,15 @@ import { useLink, useT } from "~/hooks"
 import { objStore } from "~/store"
 import { ObjType } from "~/types"
 import { bus } from "~/utils"
-import lightGallery from "lightgallery"
-import lgThumbnail from "lightgallery/plugins/thumbnail"
-import lgZoom from "lightgallery/plugins/zoom"
-import lgRotate from "lightgallery/plugins/rotate"
-import lgAutoplay from "lightgallery/plugins/autoplay"
-import lgFullscreen from "lightgallery/plugins/fullscreen"
-import "lightgallery/css/lightgallery-bundle.css"
-import { LightGallery } from "lightgallery/lightgallery"
+import lightGallery from "sweetphotos"
+import lgThumbnail from "sweetphotos/plugins/thumbnail"
+import lgZoom from "sweetphotos/plugins/zoom"
+import lgRotate from "sweetphotos/plugins/rotate"
+import lgAutoplay from "sweetphotos/plugins/autoplay"
+import lgFullscreen from "sweetphotos/plugins/fullscreen"
+import "sweetphotos/css/lightgallery-bundle.css"
+import { LightGallery } from "sweetphotos/lightgallery"
 import { Search } from "./Search"
-import { Heading } from "@hope-ui/solid"
 
 const ListLayout = lazy(() => import("./List"))
 const GridLayout = lazy(() => import("./Grid"))

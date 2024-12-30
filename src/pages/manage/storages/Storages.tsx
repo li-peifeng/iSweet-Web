@@ -129,6 +129,7 @@ const Storages = () => {
           </Select>
         </Show>
         <HopeSwitch
+          minW={80}
           checked={layout() === "table"}
           onChange={(e) => {
             setLayout(e.currentTarget.checked ? "table" : "grid")

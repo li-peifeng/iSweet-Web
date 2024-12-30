@@ -6,7 +6,7 @@ import { operations } from "../toolbar/operations"
 import { For, Show } from "solid-js"
 import { bus, convertURL, notify } from "~/utils"
 import { ObjType, UserMethods, UserPermissions } from "~/types"
-import { getSettingBool, haveSelected, me, oneChecked } from "~/store"
+import { getSettingBool, haveSelected, me, oneChecked, userCan } from "~/store"
 import { players } from "../previews/video_box"
 import { BsPlayCircleFill } from "solid-icons/bs"
 
@@ -125,7 +125,9 @@ export const ContextMenu = () => {
           </For>
         </Submenu>
       </Show>
-      <Show when={!oneChecked() && haveSelected()}>
+      <Show
+        when={!oneChecked() && haveSelected() && UserMethods.is_admin(me())}
+      >
         <Submenu label={<ItemContent name="copy_link" />}>
           <Item onClick={copySelectedPreviewPage}>
             {t("home.toolbar.preview_page")}
@@ -152,8 +154,8 @@ export const ContextMenu = () => {
             <Item onClick={playlistDownloadSelected}>
               {t("home.toolbar.playlist_download")}
             </Item>
+            <Item onClick={sendToAria2}>{t("home.toolbar.send_aria2")}</Item>
           </Show>
-          <Item onClick={sendToAria2}>{t("home.toolbar.send_aria2")}</Item>
         </Submenu>
       </Show>
     </Menu>

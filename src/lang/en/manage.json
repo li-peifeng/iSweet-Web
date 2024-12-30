@@ -1,6 +1,6 @@
 {
   "sidemenu": {
-    "dashboard": "Dashboard",
+    "dashboard": "Sweet • Cloud",
     "settings": "Settings",
     "site": "Site",
     "style": "Style",
@@ -25,7 +25,7 @@
     "s3": "S3",
     "ftp": "FTP"
   },
-  "title": "AList Manage",
+  "title": "Sweet • Cloud",
   "not_admin": "You are not admin user, please login with admin account.",
   "logout_success": "Logout successfully",
   "send": "Send",

@@ -1,35 +1,104 @@
+/* music 圆角 */
 #audio-player {
-  border-radius: 8px;
+  border-radius: 10px !important;
 }
+
+/* music PIC 透明 */
+.aplayer-pic {
+  background-color: #ffffff00 !important;
+}
+
+/* music 背景透明 */
+.aplayer {
+  background: #ffffff00 !important;
+}
+
 .hope-ui-dark .aplayer {
-  background: rgba(30, 144, 255, 0.05);
+  background: #1e90ff05;
   color: #ecedee !important;
 }
+
+/* music 播放进度条 */
+.aplayer
+  .aplayer-info
+  .aplayer-controller
+  .aplayer-bar-wrap
+  .aplayer-bar
+  .aplayer-loaded {
+  background: #fbfbfb !important;
+}
+
+.aplayer
+  .aplayer-info
+  .aplayer-controller
+  .aplayer-bar-wrap
+  .aplayer-bar
+  .aplayer-played {
+  background: #007bff !important;
+}
+
+.hope-ui-dark
+  .aplayer
+  .aplayer-info
+  .aplayer-controller
+  .aplayer-bar-wrap
+  .aplayer-bar
+  .aplayer-loaded {
+  background: #464646 !important;
+}
+
+.hope-ui-dark
+  .aplayer
+  .aplayer-info
+  .aplayer-controller
+  .aplayer-bar-wrap
+  .aplayer-bar
+  .aplayer-played {
+  background: #0078f0 !important;
+}
+
+/* music 歌词栏透明 */
+.aplayer .aplayer-lrc:before {
+  background: unset !important;
+}
+
+.aplayer .aplayer-lrc:after {
+  background: unset !important;
+}
+
+.hope-ui-dark .aplayer .aplayer-lrc:before {
+  background: unset !important;
+}
+
+.hope-ui-dark .aplayer .aplayer-lrc:after {
+  background: unset !important;
+}
+
+/* music 当前播放背景 */
+.aplayer .aplayer-list ol li:hover,
+.aplayer .aplayer-list ol li.aplayer-list-light {
+  background-color: #ffffff00;
+  background-image: linear-gradient(180deg, #ffffff99, #ffdede99, #ffffff99);
+}
+
+.hope-ui-dark .aplayer .aplayer-list ol li:hover,
+.hope-ui-dark .aplayer .aplayer-list ol li.aplayer-list-light {
+  background-color: #00000000;
+  background-image: linear-gradient(180deg, #7e7e7e99, #00ff0000, #7e7e7e99);
+}
+
 .hope-ui-dark .aplayer .aplayer-info .aplayer-music .aplayer-author {
   color: #ddd;
 }
-.hope-ui-dark .aplayer .aplayer-list ol li:hover {
-  background: #505050;
-}
-.hope-ui-dark .aplayer .aplayer-list ol li.aplayer-list-light {
-  background: #505050;
-}
+
 .hope-ui-dark .aplayer .aplayer-list ol li .aplayer-list-author {
   color: #aaa;
 }
+
 .hope-ui-dark .aplayer .aplayer-list ol li .aplayer-list-index {
   color: #cfcfcf;
 }
-.hope-ui-dark .aplayer .aplayer-lrc:after {
-  background: linear-gradient(
-    180deg,
-    hsl(221deg 33% 17% / 0%) 0,
-    hsl(221deg 33% 17%)
-  );
-}
-.hope-ui-dark .aplayer .aplayer-lrc:before {
-  background: linear-gradient(180deg, #1d263a 0, hsl(0deg 0% 0% / 0%));
-}
+
 .hope-ui-dark
   .aplayer
   .aplayer-info
@@ -39,15 +108,27 @@
   path {
   fill: #fff;
 }
+
 .hope-ui-dark .aplayer .aplayer-lrc p {
   color: #fff;
 }
+
 .hope-ui-dark .aplayer .aplayer-list ol li {
-  border-top: 1px solid #2e2e2e;
+  border-top: 1px solid #ffffff1a !important;
 }
+
+.aplayer .aplayer-list ol li {
+  border-top: 1px solid #0000001a !important;
+}
+
+.aplayer.aplayer-withlist .aplayer-info {
+  border-bottom: 1px solid #ffffff00 !important;
+}
+
 .hope-ui-dark .aplayer.aplayer-withlist .aplayer-info {
-  border-bottom: 1px solid #404040;
+  border-bottom: 1px solid #00000000 !important;
 }
+
 .hope-ui-dark .aplayer {
   color: var(--hty-text-color);
 }

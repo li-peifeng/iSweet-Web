@@ -5,7 +5,6 @@ const theme: HopeThemeConfig = {
   initialColorMode: "system",
   lightTheme: {
     colors: {
-      // background: "$neutral2",
       background: "#f7f8fa",
     },
   },
@@ -124,6 +123,8 @@ const theme: HopeThemeConfig = {
         root: {
           rounded: "$lg",
           border: "unset",
+          backdropFilter: "blur(15px)",
+          backgroundColor: "#ffffff00",
         },
       },
     },
@@ -131,6 +132,8 @@ const theme: HopeThemeConfig = {
       baseStyle: {
         root: {
           rounded: "$lg",
+          backgroundColor: "#ffffff00",
+          backdropFilter: "blur(15px)",
         },
       },
     },

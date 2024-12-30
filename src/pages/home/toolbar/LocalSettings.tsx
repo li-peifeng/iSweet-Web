@@ -25,10 +25,13 @@ import {
   Switch as HopeSwitch,
 } from "@hope-ui/solid"
 import { For, Match, onCleanup, Switch } from "solid-js"
-import { SwitchLanguageWhite, SwitchColorMode } from "~/components"
 import { useT } from "~/hooks"
 import { initialLocalSettings, local, LocalSetting, setLocal } from "~/store"
 import { bus } from "~/utils"
+import { SwitchColorMode } from "~/components"
+import { Icon } from "@hope-ui/solid"
+import { notificationService } from "@hope-ui/solid"
+import { VsActivateBreakpoints as Auto } from "solid-icons/vs"
 
 function LocalSettingEdit(props: LocalSetting) {
   const t = useT()
@@ -119,8 +122,23 @@ export const LocalSettings = () => {
           </VStack>
           <Center mt="$4">
             <HStack spacing="$4" p="$2" color="$neutral11">
-              <SwitchLanguageWhite />
               <SwitchColorMode />
+              <Icon
+                as={Auto}
+                cursor="pointer"
+                boxSize="$8"
+                onClick={() => {
+                  localStorage.removeItem("hope-ui-color-mode")
+                  notificationService.show({
+                    status: "success",
+                    description: "设置成功，即将自动刷新",
+                    closable: false,
+                  })
+                  setTimeout(function () {
+                    location.reload()
+                  }, 2500)
+                }}
+              />
             </HStack>
           </Center>
         </DrawerBody>

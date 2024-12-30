@@ -1,34 +1,19 @@
-## Usage
+## 个性魔改美化定制版
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+功能详情请看更新日志。
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+## Docker
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+docker pull leolitaly/sweet-cloud:latest
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+预览图
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm dev` or `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+### light
+![IMG_0116](https://github.com/user-attachments/assets/6e248f9e-1f0f-4280-b209-2a137252f69b)
+![IMG_0119](https://github.com/user-attachments/assets/caa65fd7-9c7f-43c5-b312-cc6ec5fa45fc)
+![IMG_0118](https://github.com/user-attachments/assets/6837459c-13f6-4b8d-af6c-d5dc415640bc)
+![IMG_0117](https://github.com/user-attachments/assets/ca96e8ff-15b3-42e2-9fa5-c9485043efa5)
+### dark
+![IMG_0115](https://github.com/user-attachments/assets/4a2a5a04-cce8-4566-8476-e6bd8868cb7d)
+![IMG_0114](https://github.com/user-attachments/assets/c4e88d97-9629-4411-a65c-a4c41d75691b)
+![IMG_0113](https://github.com/user-attachments/assets/69994ec3-2861-4f15-83b7-619ec7ecff79)

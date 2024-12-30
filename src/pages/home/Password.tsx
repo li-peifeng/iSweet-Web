@@ -8,9 +8,9 @@ import {
   useColorModeValue,
   VStack,
 } from "@hope-ui/solid"
-import { LinkWithBase } from "~/components"
 import { usePath, useRouter, useT } from "~/hooks"
 import { password, setPassword } from "~/store"
+import { Link } from "@solidjs/router"
 
 const Password = () => {
   const t = useT()
@@ -45,13 +45,8 @@ const Password = () => {
           direction={{ "@initial": "column", "@sm": "row" }}
           columnGap="$1"
         >
-          <Text>{t("global.have_account")}</Text>
-          <Text
-            color="$info9"
-            as={LinkWithBase}
-            href={`/@login?redirect=${encodeURIComponent(location.pathname)}`}
-          >
-            {t("global.go_login")}
+          <Text color="$info9" as={Link} href={`https://peifeng.li/password`}>
+            获取授权
           </Text>
         </Flex>
         <HStack spacing="$2">

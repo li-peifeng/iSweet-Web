@@ -23,12 +23,15 @@
   },
   "no_images": "No images in the current folder",
   "load_more": "Load more",
-  "no_more": "No more",
+  "no_more": "············",
   "input_password": "Please input password",
   "toolbar": {
-    "more": "More",
+    "more": "open toolbar",
+    "close": "close toolbar",
+    "browser_setting": "browser setting",
     "refresh": "Refresh",
     "toggle_theme": "Toggle Theme",
+    "toggle_theme_auto": "Auto toggle theme",
     "switch_lang": "Switch Language",
     "toggle_markdown_toc": "Toggle Outline",
     "toggle_checkbox": "Toggle Checkbox",
@@ -63,6 +66,7 @@
     "package_download_disabled": "Package download is disabled",
     "send_aria2": "Send to Aria2",
     "aria2_not_set": "Please set aria2 rpc url",
+    "aria2_set_error": "aria2 set error",
     "send_aria2_success": "Send to aria2 successfully",
     "pre_package_download-tips": "Using streamsaver in the browser instead of the server for package download requires the corresponding storage to support cors, and the unsupported storage will fail.",
     "package_download-tips": "Downloading, please wait don't close the page",
@@ -153,12 +157,13 @@
     "success": "Download completed"
   },
   "footer": {
-    "powered_by": "Powered by AList",
-    "manage": "Manage"
+    "powered_by": "PeiFeng.Li",
+    "manage": "Sweet • Cloud",
+    "guest": "Sweet • Cloud"
   },
   "search": {
     "search": "Search",
-    "no_result": "No result yet",
+    "no_result": "Sweet • Search",
     "scopes": {
       "all": "All",
       "folder": "Folder",
