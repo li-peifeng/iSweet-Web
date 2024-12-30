@@ -303,6 +303,7 @@ const Profile = () => {
           {t("users.add_webauthn")}
         </Button>
       </Show>
+      <PublicKeys isMine={true} userId={me().id} />
       <HStack wrap="wrap" gap="$2" mt="$2">
         <For each={UserPermissions}>
           {(item, i) => (
@@ -312,7 +313,6 @@ const Profile = () => {
           )}
         </For>
       </HStack>
-      <PublicKeys isMine={true} userId={me().id} />
     </VStack>
   )
 }
