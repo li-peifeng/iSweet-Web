@@ -30,9 +30,6 @@ export const Download = (props: { openWith?: boolean }) => {
         <Button colorScheme="accent" onClick={() => copyCurrentRawLink(true)}>
           {t("home.toolbar.copy_link")}
         </Button>
-        <Button as="a" href={objStore.raw_url} target="_blank">
-          {t("home.preview.download")}
-        </Button>
         <Popover opened={pinned() || hover()} motionPreset="none">
           <PopoverTrigger
             as={IconButton}
@@ -49,7 +46,7 @@ export const Download = (props: { openWith?: boolean }) => {
             <PopoverArrow />
             <PopoverBody>
               <Image
-                boxSize="200px"
+                boxSize="156px"
                 src={qrUrl()}
                 alt="下载链接二维码"
                 objectFit="cover"
@@ -57,6 +54,9 @@ export const Download = (props: { openWith?: boolean }) => {
             </PopoverBody>
           </PopoverContent>
         </Popover>
+        <Button as="a" href={objStore.raw_url} target="_blank">
+          {t("home.preview.download")}
+        </Button>
       </HStack>
       <Show when={props.openWith}>
         <OpenWith />
