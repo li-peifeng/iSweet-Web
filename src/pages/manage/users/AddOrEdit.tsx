@@ -133,18 +133,9 @@ const AddOrEdit = () => {
             </For>
           </Flex>
         </FormControl>
-        <FormControl w="fit-content" display="flex">
-          <Checkbox
-            css={{ whiteSpace: "nowrap" }}
-            id="disabled"
-            onChange={(e: any) => setUser("disabled", e.currentTarget.checked)}
-            color="$neutral10"
-            fontSize="$sm"
-            checked={user.disabled}
-          >
-            {t(`users.disabled`)}
-          </Checkbox>
-        </FormControl>
+        <Show when={id && !UserMethods.is_guest(user)}>
+          <PublicKeys isMine={false} userId={parseInt(id)} />
+        </Show>
         <Button
           loading={okLoading()}
           onClick={async () => {
@@ -160,9 +151,18 @@ const AddOrEdit = () => {
         >
           {t(`global.${id ? "save" : "add"}`)}
         </Button>
-        <Show when={id && !UserMethods.is_guest(user)}>
-          <PublicKeys isMine={false} userId={parseInt(id)} />
-        </Show>
+        <FormControl w="fit-content" display="flex">
+          <Checkbox
+            css={{ whiteSpace: "nowrap" }}
+            id="disabled"
+            onChange={(e: any) => setUser("disabled", e.currentTarget.checked)}
+            color="$neutral10"
+            fontSize="$sm"
+            checked={user.disabled}
+          >
+            {t(`users.disabled`)}
+          </Checkbox>
+        </FormControl>
       </VStack>
     </MaybeLoading>
   )
