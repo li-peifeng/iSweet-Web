@@ -1,0 +1,54 @@
+{
+  "offline_download": "下载文件到本地设备",
+  "offline_download_transfer": "将下载的文件传输到相应的存储",
+  "upload": "上传文件到对应的存储",
+  "copy": "将文件从一个存储复制到另一个存储",
+  "done": "已完成",
+  "undone": "运行中...",
+  "clear_succeeded": "删除已成功",
+  "retry": "重试",
+  "retry_failed": "重试失败项",
+  "state": {
+    "0": "等待中...",
+    "1": "运行中...",
+    "2": "成功",
+    "3": "正在取消···",
+    "4": "已取消",
+    "5": "错误",
+    "6": "失败中…",
+    "7": "失败",
+    "8": "等待重试",
+    "9": "重试前置操作中"
+  },
+  "retry_selected": "重试已选择",
+  "cancel_selected": "取消选中的",
+  "delete_selected": "删除选中的",
+  "filter": "筛选器",
+  "expand": "展开",
+  "fold": "折叠...",
+  "expand_all": "全部展开",
+  "fold_all": "折叠所有",
+  "attr": {
+    "name": "名称",
+    "creator": "创建者",
+    "state": "状态",
+    "progress": "进度",
+    "operation": "操作",
+    "copy": {
+      "src": "源路径",
+      "dst": "目标路径"
+    },
+    "upload": {
+      "path": "路径"
+    },
+    "offline_download": {
+      "url": "链接地址",
+      "path": "目标路径",
+      "transfer_src": "源路径",
+      "transfer_dst": "目标路径"
+    },
+    "status": "状态",
+    "err": "错误"
+  },
+  "show_only_mine": "只显示我的任务"
+}
