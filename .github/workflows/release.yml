@@ -6,22 +6,7 @@ on:
       - "*"
 
 jobs:
-  changelog:
-    name: Create release changelog
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Generate changelog
-        run: npx changelogithub # or changelogithub@0.12 if ensure the stable result
-        env:
-          GITHUB_TOKEN: ${{secrets.MY_TOKEN}}
-
   release:
-    needs: changelog
     strategy:
       matrix:
         platform: [ubuntu-latest]
@@ -31,7 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           registry-url: "https://registry.npmjs.org"
 
       - uses: pnpm/action-setup@v4
@@ -45,7 +30,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          path: alist-web
+          path: Sweet-Cloud-Web
           persist-credentials: false
           fetch-depth: 0
           submodules: recursive
@@ -53,38 +38,26 @@ jobs:
       - name: Checkout dist repo
         uses: actions/checkout@v4
         with:
-          repository: alist-org/web-dist
+          repository: li-peifeng/Sweet-Cloud-Dist
           ref: main
-          path: web-dist
+          path: Sweet-Cloud-Dist
           persist-credentials: false
           fetch-depth: 0
 
       - name: Build
         run: |
-          mv alist-web/release.sh .
+          mv Sweet-Cloud-Web/release.sh .
           bash release.sh
-        env:
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-
-      - name: Publish npm
-        run: |
-          cd alist-web
-          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
-          pnpm publish --no-git-checks
-          cd ..
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload dist files
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.MY_TOKEN }}
           branch: main
-          directory: web-dist
-          repository: alist-org/web-dist
+          directory: Sweet-Cloud-Dist
+          repository: li-peifeng/Sweet-Cloud-Dist
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: compress/*
