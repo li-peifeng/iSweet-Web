@@ -23,8 +23,8 @@ export interface PublicKeyCol {
 }
 
 export const cols: PublicKeyCol[] = [
-  { name: "title", textAlign: "left", w: "calc(35% - 110px)" },
-  { name: "fingerprint", textAlign: "left", w: "calc(65% - 110px)" },
+  { name: "title", textAlign: "left", w: "calc(45% - 110px)" },
+  { name: "fingerprint", textAlign: "left", w: "calc(55% - 110px)" },
   { name: "last_used", textAlign: "right", w: "140px" },
   { name: "operation", textAlign: "right", w: "80px" },
 ]
