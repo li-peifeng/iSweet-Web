@@ -38,7 +38,7 @@ export const Download = (props: { openWith?: boolean }) => {
             as={IconButton}
             icon={<BsQrCode />}
             aria-label="QRCode"
-            colorScheme="success"
+            colorScheme="warning"
             onClick={() => {
               setPinned(!pinned())
             }}
@@ -49,9 +49,9 @@ export const Download = (props: { openWith?: boolean }) => {
             <PopoverArrow />
             <PopoverBody>
               <Image
-                boxSize="100px"
+                boxSize="200px"
                 src={qrUrl()}
-                alt="QR Code of download link"
+                alt="下载链接二维码"
                 objectFit="cover"
               />
             </PopoverBody>
