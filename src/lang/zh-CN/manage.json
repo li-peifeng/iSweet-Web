@@ -1,6 +1,6 @@
 {
   "sidemenu": {
-    "dashboard": "Sweet • Cloud",
+    "dashboard": "iSweet • 管理",
     "settings": "设置",
     "site": "站点",
     "style": "样式",
@@ -24,7 +24,7 @@
     "ldap": "LDAP",
     "s3": "S3"
   },
-  "title": "Sweet • Cloud",
+  "title": "iSweet • 管理",
   "not_admin": "请使用管理员帐户登录",
   "logout_success": "退出成功",
   "send": "发送",

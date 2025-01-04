@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Commit dist
         run: |
-          cd Sweet-Cloud-Dist
+          cd iSweet-Dist
           rm -rf dist
-          cp -r ../Sweet-Cloud-Web/dist .
+          cp -r ../iSweet-Web/dist .
           git add .
           git config --local user.email "i@nn.ci"
           git config --local user.name "Noah Hsu"
@@ -26,6 +26,6 @@ jobs:
         with:
           github_token: ${{ secrets.MY_TOKEN }}
           branch: dev
-          directory: Sweet-Cloud-Dist
-          repository: li-peifeng/Sweet-Cloud-Dist
+          directory: iSweet-Dist
+          repository: li-peifeng/iSweet-Dist
           force: true
