@@ -1,5 +1,5 @@
 # replace version
-cd Sweet-Cloud-Web
+cd iSweet-Web
 version=$(git describe --abbrev=0 --tags)
 sed -i -e "s/\"version\": \"0.0.0\"/\"version\": \"$version\"/g" package.json
 cat package.json
@@ -12,7 +12,7 @@ cp -r dist ../
 cd ..
 
 # commit to web-dist
-cd Sweet-Cloud-Dist
+cd iSweet-Dist
 rm -rf dist
 cp -r ../dist .
 git add .
