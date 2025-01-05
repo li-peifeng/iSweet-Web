@@ -1,5 +1,5 @@
 {
-  "name": "alist-web",
+  "name": "isweet-web",
   "version": "0.0.0",
   "author": {
     "name": "Xhofe",
@@ -26,7 +26,7 @@
     "i18n:build": "pnpm crowdin && node ./scripts/i18n.mjs",
     "i18n:release": "pnpm run crowdin:download && node ./scripts/i18n.mjs",
     "start": "vite",
-    "dev": "vite --force --host 0.0.0.0",
+    "dev": "vite --force",
     "build": "vite build",
     "serve": "vite preview",
     "prepare": "husky install",
