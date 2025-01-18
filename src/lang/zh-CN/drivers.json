@@ -376,6 +376,24 @@
     "root_folder_id": "根文件夹ID",
     "username": "用户名"
   },
+  "GitHub API": {
+    "author_email": "作者电子邮件",
+    "author_name": "作者姓名",
+    "committer_email": "佣金电子邮件",
+    "committer_name": "佣金名称",
+    "copy_commit_message": "复制提交消息",
+    "delete_commit_message": "删除提交消息",
+    "mkdir_commit_message": "Mkdir 提交消息",
+    "move_commit_message": "移动提交消息",
+    "owner": "所有者",
+    "put_commit_message": "放置提交消息",
+    "ref": "参考值",
+    "ref-tips": "默认情况下，一个分支、一个标签或提交 SHA, 主要分支。",
+    "rename_commit_message": "重命名提交消息",
+    "repo": "复数",
+    "root_folder_path": "根文件夹路径",
+    "token": "令牌"
+  },
   "GoogleDrive": {
     "chunk_size": "分片大小",
     "chunk_size-tips": "上传分块大小 (单位: MB)",
@@ -476,7 +494,9 @@
     "thumb_concurrency": "缩略图并发数",
     "thumb_concurrency-tips": "同时生成缩略图的数量。这控制了可以并行生成多少缩略图。",
     "thumbnail": "缩略图",
-    "thumbnail-tips": "启用缩略图"
+    "thumbnail-tips": "启用缩略图",
+    "video_thumb_pos": "视频缩略图",
+    "video_thumb_pos-tips": "视频缩略图的位置。如果该值是一个数字(整数点浮点)，它代表几秒钟的时间。 如果值以“%”结尾，则代表视频持续时间的百分比。"
   },
   "MediaTrack": {
     "access_token": "访问令牌",
@@ -897,7 +917,8 @@
     "head_size": "Head 大小",
     "head_size-tips": "使用HEAD方法获取文件大小，但可能失败。",
     "url_structure": "Url 结构",
-    "url_structure-tips": "结构:\nFolderName:\n  [FileName:][FileSize:][Modified:]Url"
+    "url_structure-tips": "结构:\nFolderName:\n  [FileName:][FileSize:][Modified:]Url",
+    "writable": "可写"
   },
   "VTencent": {
     "cookie": "Cookie",
@@ -1017,6 +1038,7 @@
     "FTP": {},
     "FebBox": {},
     "FeijiPan": {},
+    "GitHub API": {},
     "GoogleDrive": {},
     "GooglePhoto": {},
     "HalalCloud": {},
@@ -1091,6 +1113,7 @@
     "FTP": "FTP",
     "FebBox": "FebBox",
     "FeijiPan": "飞机盘",
+    "GitHub API": "GitHub API",
     "GoogleDrive": "谷歌云盘",
     "GooglePhoto": "谷歌相册",
     "HalalCloud": "HalalCloud",
