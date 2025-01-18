@@ -13,11 +13,18 @@ import { r } from "."
 export const fsGet = (
   path: string = "/",
   password = "",
+  cancelToken?: CancelToken,
 ): Promise<FsGetResp> => {
-  return r.post("/fs/get", {
-    path: path,
-    password: password,
-  })
+  return r.post(
+    "/fs/get",
+    {
+      path: path,
+      password: password,
+    },
+    {
+      cancelToken: cancelToken,
+    },
+  )
 }
 export const fsList = (
   path: string = "/",

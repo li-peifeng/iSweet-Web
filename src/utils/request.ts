@@ -46,7 +46,7 @@ instance.interceptors.response.use(
     //   description: error.message,
     // });
     return {
-      code: error.response.status,
+      code: axios.isCancel(error) ? -1 : error.response?.status,
       message: error.message,
     }
   },

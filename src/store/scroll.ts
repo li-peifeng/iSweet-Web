@@ -2,7 +2,7 @@ import { log } from "~/utils"
 
 export const ScrollMap = new Map<string, number>()
 
-export const recordScroll = (path: string, scroll: number) => {
+export const recordScroll = (path: string, scroll: number = window.scrollY) => {
   ScrollMap.set(path, scroll)
   log("recordScroll", path, scroll)
 }

@@ -12,6 +12,7 @@ import {
 import { OrderBy } from "~/store"
 import { Col, cols, ListItem } from "./ListItem"
 import { ItemCheckbox, useSelectWithMouse } from "./helper"
+import { bus } from "~/utils"
 
 const ListLayout = () => {
   const t = useT()
@@ -41,11 +42,23 @@ const ListLayout = () => {
       },
     }
   }
+  const onDragOver = (e: DragEvent) => {
+    const items = Array.from(e.dataTransfer?.items ?? [])
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i]
+      if (item.kind === "file") {
+        bus.emit("tool", "upload")
+        e.preventDefault()
+        break
+      }
+    }
+  }
   const { isMouseSupported, registerSelectContainer, captureContentMenu } =
     useSelectWithMouse()
   registerSelectContainer()
   return (
     <VStack
+      onDragOver={onDragOver}
       oncapture:contextmenu={captureContentMenu}
       classList={{ "viselect-container": isMouseSupported() }}
       class="list"
