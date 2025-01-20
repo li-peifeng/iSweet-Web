@@ -34,7 +34,7 @@
     "state": "状态",
     "progress": "进度",
     "operation": "操作",
-    "speed": "Speed",
+    "speed": "速度",
     "copy": {
       "src": "源路径",
       "dst": "目标路径"
@@ -48,6 +48,7 @@
       "transfer_src": "源路径",
       "transfer_dst": "目标路径"
     },
+    "time_elapsed": "用时",
     "status": "状态",
     "err": "错误"
   },
