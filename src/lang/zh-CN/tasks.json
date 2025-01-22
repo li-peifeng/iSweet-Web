@@ -3,6 +3,8 @@
   "offline_download_transfer": "将下载的文件传输到相应的存储",
   "upload": "上传文件到对应的存储",
   "copy": "将文件从一个存储复制到另一个存储",
+  "decompress": "下载并解压缩档案文件",
+  "decompress_upload": "将解压的文件上传到目标存储",
   "done": "已完成",
   "undone": "运行中...",
   "clear_succeeded": "删除已成功",
@@ -47,6 +49,12 @@
       "path": "目标路径",
       "transfer_src": "源路径",
       "transfer_dst": "目标路径"
+    },
+    "decompress": {
+      "src": "源路径",
+      "dst": "目标路径",
+      "inner": "内部路径",
+      "password": "解压密码"
     },
     "time_elapsed": "用时",
     "status": "状态",

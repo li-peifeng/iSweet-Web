@@ -43,6 +43,16 @@
     "choose_dst_folder": "选择目标文件夹",
     "delete": "删除",
     "delete-tips": "确定要删除吗?",
+    "decompress": "解压缩",
+    "decompress-pass": "解压密码: ",
+    "decompress-cache-full": "将缓存内容全部存入临时文件",
+    "decompress-put-into-new": "解压到新的子文件夹",
+    "extract": "提取到",
+    "archive": {
+      "input_password": "请输入解压密码",
+      "incorrect_password": "密码不对哦",
+      "extract_header": "提取到 {{path}} ..."
+    },
     "copy_link": "复制链接",
     "preview_page": "预览页面",
     "down_link": "下载链接",
@@ -176,5 +186,6 @@
   },
   "fetching_settings_failed": "正在启动服务，",
   "get_current_user_failed": "用户信息验证失败： ",
+  "overwrite_existing": "覆盖现有文件",
   "Loading storage, please wait": "请稍等一会再刷新页面哦"
 }
