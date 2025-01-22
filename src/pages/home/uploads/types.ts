@@ -21,4 +21,5 @@ export type Upload = (
   file: File,
   setUpload: SetUpload,
   asTask: boolean,
+  overwrite: boolean,
 ) => Promise<Error | undefined>

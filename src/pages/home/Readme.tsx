@@ -2,7 +2,7 @@ import { Box, useColorModeValue } from "@hope-ui/solid"
 import { createMemo, Show, createResource, on } from "solid-js"
 import { Markdown, MaybeLoading } from "~/components"
 import { useLink, useRouter } from "~/hooks"
-import { objStore, recoverScroll, State } from "~/store"
+import { objStore, State } from "~/store"
 import { fetchText } from "~/utils"
 
 export function Readme(props: {
@@ -50,9 +50,6 @@ export function Readme(props: {
     if (/^https?:\/\//g.test(readme)) {
       res = await fetchText(readme)
     }
-    setTimeout(() => {
-      recoverScroll(pathname())
-    })
     return res
   }
   const [content] = createResource(readme, fetchContent)

@@ -63,3 +63,32 @@ export const getOfflineDownloadTransferNameAnalyzer = (): TaskNameAnalyzer => {
     },
   }
 }
+
+export const getDecompressNameAnalyzer = (): TaskNameAnalyzer => {
+  const t = useT()
+  return {
+    regex:
+      /^decompress \[(.+)]\((.*\/([^\/]+))\)\[(.+)] to \[(.+)]\((.+)\) with password <(.*)>$/,
+    title: (matches) => matches[3],
+    attrs: {
+      [t(`tasks.attr.decompress.src`)]: (matches) =>
+        getPath(matches[1], matches[2]),
+      [t(`tasks.attr.decompress.dst`)]: (matches) =>
+        getPath(matches[5], matches[6]),
+      [t(`tasks.attr.decompress.inner`)]: (matches) => <p>{matches[4]}</p>,
+      [t(`tasks.attr.decompress.password`)]: (matches) => <p>{matches[7]}</p>,
+    },
+  }
+}
+
+export const getDecompressUploadNameAnalyzer = (): TaskNameAnalyzer => {
+  const t = useT()
+  return {
+    regex: /^upload (.+) to \[(.+)]\((.+)\)$/,
+    title: (matches) => matches[1],
+    attrs: {
+      [t(`tasks.attr.decompress.dst`)]: (matches) =>
+        getPath(matches[2], matches[3]),
+    },
+  }
+}

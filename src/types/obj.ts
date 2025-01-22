@@ -27,3 +27,20 @@ export type RenameObj = {
   src_name: string
   new_name: string
 }
+
+export type ObjTree = Obj & {
+  children?: ObjTree[]
+}
+
+export type ArchiveMeta = {
+  content: ObjTree[] | null
+  encrypted: boolean
+  comment: string
+  raw_url: string
+  sign: string
+}
+
+export type ArchiveList = {
+  content: Obj[]
+  total: number
+}

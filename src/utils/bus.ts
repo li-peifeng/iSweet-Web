@@ -5,6 +5,7 @@ type Events = {
   gallery: string
   tool: string
   pathname: string
+  extract: string
 }
 
 export const bus = mitt<Events>()

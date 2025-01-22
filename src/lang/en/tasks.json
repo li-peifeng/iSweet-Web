@@ -3,6 +3,8 @@
   "offline_download_transfer": "Transfer downloaded file to corresponding storage",
   "upload": "Upload file to corresponding storage",
   "copy": "Copy file from a storage to another storage",
+  "decompress": "Download and decompress an archive file",
+  "decompress_upload": "Upload extracted file into target storage",
   "done": "Completed",
   "undone": "Running",
   "clear_succeeded": "Clear Succeeded",
@@ -47,6 +49,12 @@
       "path": "Destination Path",
       "transfer_src": "Source Path",
       "transfer_dst": "Destination Path"
+    },
+    "decompress": {
+      "src": "Source Path",
+      "dst": "Destination Path",
+      "inner": "Inner Path",
+      "password": "Extraction Password"
     },
     "time_elapsed": "Time Elapsed",
     "status": "Status",

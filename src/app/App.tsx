@@ -20,6 +20,7 @@ import "./index.css"
 import { useI18n } from "@solid-primitives/i18n"
 import { initialLang, langMap, loadedLangs } from "./i18n"
 import { Resp } from "~/types"
+import { setArchiveExtensions } from "~/store/archive"
 
 const Home = lazy(() => import("~/pages/home/Layout"))
 const Manage = lazy(() => import("~/pages/manage"))
@@ -44,7 +45,7 @@ const App: Component = () => {
     bus.emit("pathname", pathname())
   })
 
-  const [err, setErr] = createSignal<string>()
+  const [err, setErr] = createSignal<string[]>([])
   const [loading, data] = useLoading(() =>
     Promise.all([
       (async () => {
@@ -55,7 +56,14 @@ const App: Component = () => {
         handleRespWithoutAuthAndNotify(
           (await r.get("/public/settings")) as Resp<Record<string, string>>,
           setSettings,
-          setErr,
+          (e) => setErr(err().concat(e)),
+        )
+      })(),
+      (async () => {
+        handleRespWithoutAuthAndNotify(
+          (await r.get("/public/archive_extensions")) as Resp<string[]>,
+          setArchiveExtensions,
+          (e) => setErr(err().concat(e)),
         )
       })(),
     ]),
@@ -101,11 +109,14 @@ const App: Component = () => {
           </Routes>
         }
       >
-        <Match when={err() !== undefined}>
+        <Match when={err().length > 0}>
           <Error
             h="100vh"
             msg={
-              t("home.fetching_settings_failed") + t("home." + (err() || ""))
+              t("home.fetching_settings_failed") +
+              err()
+                .map((e) => t("home." + e))
+                .join(", ")
             }
           />
         </Match>

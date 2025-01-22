@@ -1,14 +1,29 @@
 import { Component, lazy } from "solid-js"
-import { getIframePreviews } from "~/store"
-import { Obj, ObjType } from "~/types"
+import { getIframePreviews, me } from "~/store"
+import { Obj, ObjType, UserMethods, UserPermissions } from "~/types"
 import { ext } from "~/utils"
 import { generateIframePreview } from "./iframe"
 import { useRouter } from "~/hooks"
+import { getArchiveExtensions } from "~/store/archive"
+
+type Ext = string[] | "*" | (() => string[])
+
+const extsContains = (exts: Ext | undefined, ext: string): boolean => {
+  if (exts === undefined) {
+    return false
+  } else if (exts === "*") {
+    return true
+  } else if (typeof exts === "function") {
+    return (exts as () => string[])().includes(ext)
+  } else {
+    return (exts as string[]).includes(ext)
+  }
+}
 
 export interface Preview {
   name: string
   type?: ObjType
-  exts?: string[] | "*"
+  exts?: Ext
   provider?: RegExp
   component: Component
 }
@@ -84,6 +99,17 @@ const previews: Preview[] = [
     exts: ["cast"],
     component: lazy(() => import("./asciinema")),
   },
+  {
+    name: "压缩文件预览",
+    exts: () => {
+      const index = UserPermissions.findIndex(
+        (item) => item === "read_archives",
+      )
+      if (!UserMethods.can(me(), index)) return []
+      return getArchiveExtensions()
+    },
+    component: lazy(() => import("./archive")),
+  },
 ]
 
 export const getPreviews = (
@@ -101,8 +127,7 @@ export const getPreviews = (
     if (
       preview.type === file.type ||
       (typeOverride && preview.type === typeOverride) ||
-      preview.exts === "*" ||
-      preview.exts?.includes(ext(file.name).toLowerCase())
+      extsContains(preview.exts, ext(file.name).toLowerCase())
     ) {
       res.push({ name: preview.name, component: preview.component })
     }

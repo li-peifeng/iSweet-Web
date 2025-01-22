@@ -37,12 +37,21 @@
     "toggle_checkbox": "Toggle Checkbox",
     "rename": "Rename",
     "input_new_name": "Input new name",
-    "only_one-tips": "Only one object can be selected to rename",
     "move": "Move",
     "copy": "Copy",
     "choose_dst_folder": "Select destination folder",
     "delete": "Delete",
     "delete-tips": "Are you sure to delete the selected object?",
+    "decompress": "Decompress",
+    "decompress-pass": "Extraction password: ",
+    "decompress-cache-full": "Cache full into a temp-file",
+    "decompress-put-into-new": "Decompress into a new sub-folder",
+    "extract": "Extract to",
+    "archive": {
+      "input_password": "Please input extraction password",
+      "incorrect_password": "Incorrect password",
+      "extract_header": "Extract {{path}} to..."
+    },
     "copy_link": "Copy link",
     "preview_page": "Preview page",
     "down_link": "Download link",
@@ -172,5 +181,6 @@
   },
   "fetching_settings_failed": "Failed fetching settings: ",
   "get_current_user_failed": "Failed get current user: ",
-  "Loading storage, please wait": "Loading storage, please wait"
+  "Loading storage, please wait": "Loading storage, please wait",
+  "overwrite_existing": "Overwrite existing"
 }

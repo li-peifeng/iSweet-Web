@@ -11,7 +11,9 @@
     "webdav_read": "Webdav read",
     "webdav_manage": "Webdav manage",
     "ftp_read": "FTP read",
-    "ftp_manage": "FTP manage"
+    "ftp_manage": "FTP manage",
+    "read_archives": "Read archives",
+    "decompress": "Decompress"
   },
   "username": "Username",
   "password": "Password",

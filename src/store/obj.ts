@@ -60,6 +60,10 @@ const setObjs = (objs: Obj[]) => {
 }
 
 export const ObjStore = {
+  set: (data: object) => {
+    setObjStore(data)
+    setSelectedNum(selectedObjs().length)
+  },
   setObj: (obj: Obj) => {
     setObjStore("obj", obj)
   },

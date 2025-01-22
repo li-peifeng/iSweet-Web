@@ -29,6 +29,8 @@ export const UserPermissions = [
   "webdav_manage",
   "ftp_read",
   "ftp_manage",
+  "read_archives",
+  "decompress",
 ] as const
 
 export const UserMethods = {

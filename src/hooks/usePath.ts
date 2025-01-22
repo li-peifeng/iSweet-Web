@@ -6,8 +6,9 @@ import {
   State,
   getPagination,
   objStore,
-  recordScroll,
-  recoverScroll,
+  hasHistory,
+  recoverHistory,
+  clearHistory,
   me,
 } from "~/store"
 import {
@@ -71,13 +72,16 @@ let globalPage = 1
 export const getGlobalPage = () => {
   return globalPage
 }
-export const resetGlobalPage = () => {
+export const setGlobalPage = (page: number) => {
   const pagination = getPagination()
-  globalPage = 1
+  globalPage = page
   if (pagination.type === "pagination") {
-    addOrUpdateQuery("page", 1)
+    addOrUpdateQuery("page", page)
   }
-  console.log("resetGlobalPage", globalPage)
+  console.log("setGlobalPage", globalPage)
+}
+export const resetGlobalPage = () => {
+  setGlobalPage(1)
 }
 export const usePath = () => {
   const { pathname, to } = useRouter()
@@ -141,7 +145,9 @@ export const usePath = () => {
     cancelList?.()
     retry_pass = rp ?? false
     handleErr("")
-    if (IsDirRecord[path]) {
+    if (hasHistory(path)) {
+      return recoverHistory(path)
+    } else if (IsDirRecord[path]) {
       return handleFolder(path, globalPage, undefined, undefined, force)
     } else {
       return handleObj(path)
@@ -186,12 +192,12 @@ export const usePath = () => {
     if (size !== undefined && pagination.type === "all") {
       size = undefined
     }
-    globalPage = index ?? 1
     ObjStore.setState(append ? State.FetchingMore : State.FetchingObjs)
     const resp = await getObjs({ path, index, size, force })
     handleRespWithoutNotify(
       resp,
       (data) => {
+        globalPage = index ?? 1
         if (append) {
           appendObjs(data.content)
         } else {
@@ -203,9 +209,6 @@ export const usePath = () => {
         ObjStore.setWrite(data.write)
         ObjStore.setProvider(data.provider)
         ObjStore.setState(State.Folder)
-        if (!(append && (index ?? 1) > 1)) {
-          recoverScroll(path)
-        }
       },
       handleErr,
     )
@@ -239,7 +242,8 @@ export const usePath = () => {
     setPathAs: setPathAs,
     refresh: async (retry_pass?: boolean, force?: boolean) => {
       const path = pathname()
-      recordScroll(path)
+      const scroll = window.scrollY
+      clearHistory(path)
       if (
         pagination.type === "load_more" ||
         pagination.type === "auto_load_more"
@@ -253,7 +257,7 @@ export const usePath = () => {
       } else {
         await handlePathChange(path, retry_pass, force)
       }
-      recoverScroll(path)
+      window.scroll({ top: scroll, behavior: "smooth" })
     },
     pageChange: pageChange,
     loadMore: loadMore,

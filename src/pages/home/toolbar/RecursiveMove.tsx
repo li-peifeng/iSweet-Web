@@ -68,6 +68,7 @@ export const RecursiveMove = () => {
       </Modal>
 
       <ModalFolderChoose
+        header={t("home.toolbar.choose_dst_folder")}
         opened={isOpen()}
         onClose={onClose}
         loading={loading()}

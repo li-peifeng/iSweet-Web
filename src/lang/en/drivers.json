@@ -75,6 +75,7 @@
     "type": "Type",
     "types": {
       "family": "Family",
+      "group": "Group",
       "personal": "Personal",
       "personal_new": "Personal new"
     }

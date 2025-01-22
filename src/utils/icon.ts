@@ -28,11 +28,11 @@ import {
   VscodeIconsFileTypePhotoshop2,
 } from "~/components"
 import { SiAsciinema } from "solid-icons/si"
+import { getArchiveExtensions } from "~/store/archive"
 
 const iconMap = {
   "dmg,ipa,plist,tipa": BsApple,
   "exe,msi": BsWindows,
-  "zip,gz,rar,7z,tar,jar,xz": BsFileEarmarkZipFill,
   apk: ImAndroid,
   db: FaSolidDatabase,
   md: BsMarkdownFill,
@@ -55,6 +55,9 @@ export const getIconByTypeAndExt = (type: number, ext: string) => {
       if (extensions.split(",").includes(ext.toLowerCase())) {
         return icon
       }
+    }
+    if (getArchiveExtensions().includes(ext)) {
+      return BsFileEarmarkZipFill
     }
   }
   switch (type) {

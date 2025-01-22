@@ -7,6 +7,7 @@ export const FormUpload: Upload = async (
   file: File,
   setUpload: SetUpload,
   asTask = false,
+  overwrite = false,
 ): Promise<Error | undefined> => {
   let oldTimestamp = new Date().valueOf()
   let oldLoaded = 0
@@ -19,6 +20,7 @@ export const FormUpload: Upload = async (
       "Content-Type": "multipart/form-data",
       "Last-Modified": file.lastModified,
       Password: password(),
+      Overwrite: overwrite.toString(),
     },
     onUploadProgress: (progressEvent) => {
       if (progressEvent.total) {

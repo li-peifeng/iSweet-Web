@@ -22,6 +22,7 @@ import { IoCopy, IoHome, IoMagnetOutline } from "solid-icons/io"
 import { Component, lazy } from "solid-js"
 import { Group, UserRole } from "~/types"
 import { FaSolidBook, FaSolidDatabase } from "solid-icons/fa"
+import { TbArchive } from "solid-icons/tb"
 
 export type SideMenuItem = SideMenuItemProps & {
   component?: Component
@@ -137,6 +138,13 @@ export const side_menu_items: SideMenuItem[] = [
         to: "/@manage/tasks/copy",
         role: UserRole.GENERAL,
         component: lazy(() => import("./tasks/Copy")),
+      },
+      {
+        title: "manage.sidemenu.decompress",
+        icon: TbArchive,
+        to: "/@manage/tasks/decompress",
+        role: UserRole.GENERAL,
+        component: lazy(() => import("./tasks/Decompress")),
       },
     ],
   },

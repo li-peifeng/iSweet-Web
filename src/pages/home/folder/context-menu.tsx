@@ -6,9 +6,16 @@ import { operations } from "../toolbar/operations"
 import { For, Show } from "solid-js"
 import { bus, convertURL, notify } from "~/utils"
 import { ObjType, UserMethods, UserPermissions } from "~/types"
-import { getSettingBool, haveSelected, me, oneChecked, userCan } from "~/store"
+import {
+  getSettingBool,
+  haveSelected,
+  me,
+  oneChecked,
+  selectedObjs,
+} from "~/store"
 import { players } from "../previews/video_box"
 import { BsPlayCircleFill } from "solid-icons/bs"
+import { isArchive } from "~/store/archive"
 
 const ItemContent = (props: { name: string }) => {
   const t = useT()
@@ -57,6 +64,25 @@ export const ContextMenu = () => {
           </Item>
         )}
       </For>
+      <Show when={oneChecked()}>
+        <Item
+          hidden={() => {
+            const index = UserPermissions.findIndex(
+              (item) => item === "decompress",
+            )
+            return (
+              !UserMethods.can(me(), index) ||
+              selectedObjs()[0].is_dir ||
+              !isArchive(selectedObjs()[0].name)
+            )
+          }}
+          onClick={() => {
+            bus.emit("tool", "decompress")
+          }}
+        >
+          <ItemContent name="decompress" />
+        </Item>
+      </Show>
       <Show when={oneChecked()}>
         <Item
           onClick={({ props }) => {
