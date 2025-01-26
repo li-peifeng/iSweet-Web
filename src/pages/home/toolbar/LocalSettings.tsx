@@ -28,7 +28,7 @@ import { For, Match, onCleanup, Switch } from "solid-js"
 import { useT } from "~/hooks"
 import { initialLocalSettings, local, LocalSetting, setLocal } from "~/store"
 import { bus } from "~/utils"
-import { SwitchColorMode } from "~/components"
+import { SwitchLanguageWhite, SwitchColorMode } from "~/components"
 import { Icon } from "@hope-ui/solid"
 import { notificationService } from "@hope-ui/solid"
 import { VsActivateBreakpoints as Auto } from "solid-icons/vs"
@@ -139,6 +139,7 @@ export const LocalSettings = () => {
                   }, 2500)
                 }}
               />
+              <SwitchLanguageWhite />
             </HStack>
           </Center>
         </DrawerBody>

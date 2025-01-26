@@ -13,6 +13,7 @@ import {
   Icon,
 } from "@hope-ui/solid"
 import { createMemo, createSignal, Show } from "solid-js"
+import { SwitchColorMode, SwitchLanguageWhite } from "~/components"
 import { useFetch, useT, useTitle, useRouter } from "~/hooks"
 import {
   changeToken,
@@ -307,6 +308,8 @@ const Login = () => {
           color="$neutral10"
           w="$full"
         >
+          <SwitchLanguageWhite />
+          <SwitchColorMode />
           <SSOLogin />
           <Show when={AuthnSignEnabled}>
             <Icon
