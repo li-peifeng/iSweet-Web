@@ -95,7 +95,7 @@ const previews: Preview[] = [
     component: lazy(() => import("./aliyun_office")),
   },
   {
-    name: "Cast_录屏",
+    name: "Asciinema__录屏",
     exts: ["cast"],
     component: lazy(() => import("./asciinema")),
   },
