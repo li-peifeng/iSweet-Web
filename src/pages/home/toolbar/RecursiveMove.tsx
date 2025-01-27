@@ -1,5 +1,6 @@
 import {
   Button,
+  Checkbox,
   Modal,
   ModalBody,
   ModalContent,
@@ -11,7 +12,7 @@ import {
 import { ModalFolderChoose } from "~/components"
 import { useFetch, usePath, useRouter, useT } from "~/hooks"
 import { bus, fsRecursiveMove, handleRespWithNotifySuccess } from "~/utils"
-import { onCleanup } from "solid-js"
+import { createSignal, onCleanup } from "solid-js"
 
 export const RecursiveMove = () => {
   const {
@@ -23,6 +24,7 @@ export const RecursiveMove = () => {
   const [loading, ok] = useFetch(fsRecursiveMove)
   const { pathname } = useRouter()
   const { refresh } = usePath()
+  const [overwrite, setOverwrite] = createSignal(false)
   const handler = (name: string) => {
     if (name === "recursiveMove") {
       openConfirmModal()
@@ -72,8 +74,19 @@ export const RecursiveMove = () => {
         opened={isOpen()}
         onClose={onClose}
         loading={loading()}
+        footerSlot={
+          <Checkbox
+            mr="auto"
+            checked={overwrite()}
+            onChange={() => {
+              setOverwrite(!overwrite())
+            }}
+          >
+            {t("home.overwrite_existing")}
+          </Checkbox>
+        }
         onSubmit={async (dst) => {
-          const resp = await ok(pathname(), dst)
+          const resp = await ok(pathname(), dst, overwrite())
           handleRespWithNotifySuccess(resp, () => {
             refresh()
             onClose()

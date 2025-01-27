@@ -45,6 +45,7 @@ import { Item, Menu, useContextMenu } from "solid-contextmenu"
 import { TbCopy, TbLink } from "solid-icons/tb"
 import { AiOutlineCloudDownload } from "solid-icons/ai"
 import { Operations } from "~/pages/home/toolbar/operations"
+import "solid-contextmenu/dist/style.css"
 
 const download = (url: string) => {
   window.open(url, "_blank")
@@ -233,6 +234,9 @@ const Preview = () => {
   const [innerPaths, setInnerPaths] = createSignal<string[]>([])
   const [orderBy, setOrderBy] = createSignal<OrderBy>()
   const [reverse, setReverse] = createSignal(false)
+  const [extractFolder, setExtractFolder] = createSignal<"" | "front" | "back">(
+    "",
+  )
   const getObjsMutex = createMutex()
   const toList = (tree: ObjTree[] | Obj[]): List => {
     let l: List = {}
@@ -277,6 +281,19 @@ const Preview = () => {
       raw_url = resp.data.raw_url
       sign = resp.data.sign
       setComment(resp.data.comment)
+      if (resp.data.sort !== undefined) {
+        let order: OrderBy | undefined = undefined
+        if (resp.data.sort.order_by !== "") {
+          order = resp.data.sort.order_by
+        }
+        let re = resp.data.sort.order_direction === "desc"
+        let ef = resp.data.sort.extract_folder
+        batch(() => {
+          setOrderBy(order)
+          setReverse(re)
+          setExtractFolder(ef)
+        })
+      }
       if (resp.data.encrypted && archive_pass === "") {
         batch(() => {
           setRequiringPassword(true)
@@ -334,10 +351,18 @@ const Preview = () => {
         return (reverse() ? -1 : 1) * naturalSort(a[orderBy()!], b[orderBy()!])
       })
     }
+    let ef = extractFolder()
+    if (ef !== "") {
+      let dir: Obj[] = []
+      let file: Obj[] = []
+      ret.forEach((o) => (o.is_dir ? dir : file).push(o))
+      ret = ef === "front" ? dir.concat(file) : file.concat(dir)
+    }
     return ret
   }
   const sortObjs = (orderBy: OrderBy, reverse?: boolean) => {
     batch(() => {
+      setExtractFolder("")
       setOrderBy(orderBy)
       if (reverse !== undefined) {
         setReverse(reverse)

@@ -144,7 +144,7 @@ export const usePath = () => {
     cancelObj?.()
     cancelList?.()
     retry_pass = rp ?? false
-    handleErr("")
+    ObjStore.setErr("")
     if (hasHistory(path)) {
       return recoverHistory(path)
     } else if (IsDirRecord[path]) {
@@ -221,9 +221,15 @@ export const usePath = () => {
         notify.error(msg)
       }
     } else {
-      if (first_fetch && msg.endsWith("object not found")) {
+      const basePath = me().base_path
+      if (
+        first_fetch &&
+        basePath != "/" &&
+        pathname().includes(basePath) &&
+        msg.endsWith("object not found")
+      ) {
         first_fetch = false
-        to(pathname().replace(me().base_path, ""))
+        to(pathname().replace(basePath, ""))
         return
       }
       if (code === undefined || code >= 0) {
