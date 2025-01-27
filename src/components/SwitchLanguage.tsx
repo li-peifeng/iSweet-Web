@@ -12,7 +12,7 @@ import {
 import { useI18n } from "@solid-primitives/i18n"
 import { createSignal, For, Show } from "solid-js"
 import { langMap, languages, loadedLangs, setLang } from "~/app/i18n"
-import { IoLanguage } from "solid-icons/io"
+import { FaSolidLanguage } from 'solid-icons/fa'
 import { Portal } from "solid-js/web"
 
 const [fetchingLang, setFetchingLang] = createSignal(false)
