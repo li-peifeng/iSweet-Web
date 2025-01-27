@@ -32,54 +32,54 @@ export type PreviewComponent = Pick<Preview, "name" | "component">
 
 const previews: Preview[] = [
   {
-    name: "HTML_网页",
+    name: "HTML网页",
     exts: ["html"],
     component: lazy(() => import("./html")),
   },
   {
-    name: "AliVideo_阿里视频",
+    name: "在线阿里网盘视频",
     type: ObjType.VIDEO,
     provider: /^Aliyundrive(Open)?$/,
     component: lazy(() => import("./aliyun_video")),
   },
   {
-    name: "Markdown_文档",
+    name: "Markdown文档",
     type: ObjType.TEXT,
     component: lazy(() => import("./markdown")),
   },
   {
-    name: "Markdown-Wrap_自动换行",
+    name: "Markdown自动换行",
     type: ObjType.TEXT,
     component: lazy(() => import("./markdown_with_word_wrap")),
   },
   {
-    name: "URL_网址",
+    name: "URL网址",
     exts: ["url"],
     component: lazy(() => import("./url")),
   },
   {
-    name: "TXT_文档",
+    name: "TXT文档",
     type: ObjType.TEXT,
     exts: ["url"],
     component: lazy(() => import("./text-editor")),
   },
   {
-    name: "Image_相片",
+    name: "在线查看图片",
     type: ObjType.IMAGE,
     component: lazy(() => import("./image")),
   },
   {
-    name: "Video_视频",
+    name: "在线播放视频",
     type: ObjType.VIDEO,
     component: lazy(() => import("./video")),
   },
   {
-    name: "Audio_音频",
+    name: "在线播放音频",
     type: ObjType.AUDIO,
     component: lazy(() => import("./audio")),
   },
   {
-    name: "IPA_iOS",
+    name: "IPA安装及下载",
     exts: ["ipa", "tipa"],
     component: lazy(() => import("./ipa")),
   },
@@ -89,18 +89,18 @@ const previews: Preview[] = [
     component: lazy(() => import("./plist")),
   },
   {
-    name: "Office_办公文档",
+    name: "办公文档",
     exts: ["doc", "docx", "ppt", "pptx", "xls", "xlsx", "pdf"],
     provider: /^Aliyundrive(Share)?$/,
     component: lazy(() => import("./aliyun_office")),
   },
   {
-    name: "Asciinema__录屏",
+    name: "录屏",
     exts: ["cast"],
     component: lazy(() => import("./asciinema")),
   },
   {
-    name: "Archive_压缩文档",
+    name: "压缩文档",
     exts: () => {
       const index = UserPermissions.findIndex(
         (item) => item === "read_archives",
@@ -142,7 +142,7 @@ export const getPreviews = (
   })
   // download page
   res.push({
-    name: "Download_下载保存",
+    name: "下载保存",
     component: lazy(() => import("./download")),
   })
   return res
