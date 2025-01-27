@@ -1,13 +1,13 @@
 {
   "login_to": "Login to the",
-  "username-tips": "Input your username",
-  "password-tips": "Input your password",
-  "otp-tips": "Input your OTP Code",
+  "username-tips": "Username",
+  "password-tips": "Password",
+  "otp-tips": "OTP Code",
   "remember": "Remember me",
   "forget": "Forget password?",
   "forget_url": "https://peifeng.li/messages",
   "clear": "Clear",
   "login": "Login",
-  "use_guest": "Browse as a guest",
+  "use_guest": "Guest",
   "success": "Login successfully"
 }
