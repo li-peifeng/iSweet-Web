@@ -75,5 +75,5 @@ export const SwitchLanguage = <C extends ElementType = "button">(
 }
 
 export const SwitchLanguageWhite = () => (
-  <SwitchLanguage as={FaSolidLanguage} boxSize="$8" />
+  <SwitchLanguage as={FaSolidLanguage} boxSize="$7" />
 )

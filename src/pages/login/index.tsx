@@ -308,7 +308,7 @@ const Login = () => {
           color="$neutral10"
           w="$full"
         >
-          <SwitchLanguageWhite />
+          <SwitchColorMode />
           <SSOLogin />
           <Show when={AuthnSignEnabled}>
             <Icon
@@ -319,7 +319,7 @@ const Login = () => {
               onclick={AuthnSwitch}
             />
           </Show>
-          <SwitchColorMode />
+          <SwitchLanguageWhite />
         </Flex>
       </VStack>
     </Center>

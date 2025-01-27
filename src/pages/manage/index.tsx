@@ -40,12 +40,11 @@ const Manage = () => {
           <SideMenu items={side_menu_items} />
           <Center>
             <HStack spacing="$4" p="$2" color="$neutral11">
-              <SwitchLanguageWhite />
               <SwitchColorMode />
               <Icon
                 as={Auto}
                 cursor="pointer"
-                boxSize="$8"
+                boxSize="$7"
                 onClick={() => {
                   localStorage.removeItem("hope-ui-color-mode")
                   notificationService.show({
@@ -58,6 +57,7 @@ const Manage = () => {
                   }, 2500)
                 }}
               />
+              <SwitchLanguageWhite />
             </HStack>
           </Center>
         </Box>

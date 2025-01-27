@@ -122,7 +122,6 @@ export const LocalSettings = () => {
           </VStack>
           <Center mt="$4">
             <HStack spacing="$4" p="$2" color="$neutral11">
-              <SwitchLanguageWhite />
               <SwitchColorMode />
               <Icon
                 as={Auto}
@@ -140,6 +139,7 @@ export const LocalSettings = () => {
                   }, 2500)
                 }}
               />
+              <SwitchLanguageWhite />
             </HStack>
           </Center>
         </DrawerBody>
