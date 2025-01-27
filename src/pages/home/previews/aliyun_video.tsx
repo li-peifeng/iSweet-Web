@@ -270,12 +270,9 @@ const Preview = () => {
         mode: 0,
         margin: [0, "0%"],
         antiOverlap: false,
-        useWorker: true,
         synchronousPlayback: false,
         lockTime: 5,
         maxLength: 100,
-        minWidth: 200,
-        maxWidth: 400,
         theme: "dark",
       }),
     )
