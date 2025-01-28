@@ -182,5 +182,6 @@
   },
   "fetching_settings_failed": "Failed fetching settings: ",
   "get_current_user_failed": "Failed get current user: ",
+  "Loading storage, please wait": "⏳⌛️⏳⌛️",
   "overwrite_existing": "Overwrite existing"
 }
