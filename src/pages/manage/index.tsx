@@ -31,6 +31,7 @@ const Manage = () => {
       <Header />
       <Flex w="$full" h="calc(100vh - 64px)">
         <Box
+          display={{ "@initial": "none", "@sm": "block" }}
           w="$56"
           h="$full"
           shadow="$md"
