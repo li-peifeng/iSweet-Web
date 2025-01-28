@@ -1,6 +1,8 @@
 import {
   Box,
+  Icon,
   Center,
+  notificationService,
   createDisclosure,
   Drawer,
   DrawerBody,
@@ -22,6 +24,8 @@ import { SideMenu } from "./SideMenu"
 import { side_menu_items } from "./sidemenu_items"
 import { changeToken, handleResp, notify, r } from "~/utils"
 import { PResp } from "~/types"
+import { VsActivateBreakpoints as Auto } from "solid-icons/vs"
+
 const { isOpen, onOpen, onClose } = createDisclosure()
 const [logOutReqLoading, logOutReq] = useFetch(
   (): PResp<any> => r.get("/auth/logout"),
@@ -91,6 +95,28 @@ const Header = () => {
           <DrawerHeader color="$info9">{t("manage.title")}</DrawerHeader>
           <DrawerBody>
             <SideMenu items={side_menu_items} />
+            <Center>
+              <HStack spacing="$4" p="$2" color="$neutral11">
+                <SwitchColorMode />
+                <Icon
+                  as={Auto}
+                  cursor="pointer"
+                  boxSize="$7"
+                  onClick={() => {
+                    localStorage.removeItem("hope-ui-color-mode")
+                    notificationService.show({
+                      status: "success",
+                      description: "设置成功，即将自动刷新",
+                      closable: false,
+                    })
+                    setTimeout(function () {
+                      location.reload()
+                    }, 2500)
+                  }}
+                />
+                <SwitchLanguageWhite />
+              </HStack>
+            </Center>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

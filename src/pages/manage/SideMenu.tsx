@@ -1,28 +1,14 @@
-import {
-  Box,
-  notificationService,
-  Center,
-  Flex,
-  Heading,
-  HStack,
-  Icon,
-  VStack,
-} from "@hope-ui/solid"
+import { Box, Flex, Heading, HStack, Icon, VStack } from "@hope-ui/solid"
 import { createMemo, createSignal, For, Match, Show, Switch } from "solid-js"
 import { useRouter, useT } from "~/hooks"
 import { BiSolidRightArrow } from "solid-icons/bi"
 import { onClose } from "./Header"
 import { UserMethods, UserRole } from "~/types"
 import { me } from "~/store"
-import {
-  AnchorWithBase,
-  SwitchColorMode,
-  SwitchLanguageWhite,
-} from "~/components"
+import { AnchorWithBase } from "~/components"
 import { Link } from "@solidjs/router"
 import { hoverColor, joinBase } from "~/utils"
 import { IconTypes } from "solid-icons"
-import { VsActivateBreakpoints as Auto } from "solid-icons/vs"
 
 export interface SideMenuItemProps {
   title: string
@@ -88,7 +74,6 @@ const SideMenuItemWithTo = (props: SideMenuItemProps) => {
       bgColor={isActive() ? "$info4" : ""}
       color={isActive() ? "$info11" : ""}
       external={props.external}
-      // _active={{ transform: "scale(.95)", transition: "0.1s" }}
     >
       <Show when={props.icon}>{<Icon mr="$2" as={props.icon} />}</Show>
       <Heading>{t(props.title)}</Heading>
@@ -130,28 +115,6 @@ const SideMenuItemWithChildren = (props: SideMenuItemProps) => {
       <Show when={open()}>
         <Box pl="$2">
           <SideMenu items={props.children!} />
-          <Center>
-            <HStack spacing="$4" p="$2" color="$neutral11">
-              <SwitchColorMode />
-              <Icon
-                as={Auto}
-                cursor="pointer"
-                boxSize="$7"
-                onClick={() => {
-                  localStorage.removeItem("hope-ui-color-mode")
-                  notificationService.show({
-                    status: "success",
-                    description: "设置成功，即将自动刷新",
-                    closable: false,
-                  })
-                  setTimeout(function () {
-                    location.reload()
-                  }, 2500)
-                }}
-              />
-              <SwitchLanguageWhite />
-            </HStack>
-          </Center>
         </Box>
       </Show>
     </Box>
