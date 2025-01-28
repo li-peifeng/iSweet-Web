@@ -110,15 +110,7 @@ const App: Component = () => {
         }
       >
         <Match when={err().length > 0}>
-          <Error
-            h="100vh"
-            msg={
-              t("home.fetching_settings_failed") +
-              err()
-                .map((e) => t("home." + e))
-                .join(", ")
-            }
-          />
+          <Error h="100vh" msg={t("home.fetching_settings_failed")} />
         </Match>
         <Match when={loading()}>
           <FullScreenLoading />
