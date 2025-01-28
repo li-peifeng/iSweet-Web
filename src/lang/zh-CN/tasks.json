@@ -7,7 +7,7 @@
   "decompress_upload": "将解压的文件上传到目标存储",
   "done": "已完成",
   "undone": "运行中...",
-  "clear_succeeded": "删除已成功",
+  "clear_succeeded": "删除已完成",
   "retry": "重试",
   "retry_failed": "重试失败项",
   "state": {

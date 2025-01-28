@@ -36,7 +36,7 @@
   "2fa_already_enabled": "已启用双重身份验证",
   "scan_qr": "扫描二维码保存密钥",
   "or_manual": "或者手动输入密钥",
-  "input_code": "输入您的2FA验证码",
+  "input_code": "输入您的 2FA 验证码",
   "verify": "验证",
   "guest-tips": "您正在作为访客访问。",
   "modify_nothing": "您不能在此修改任何内容。",
