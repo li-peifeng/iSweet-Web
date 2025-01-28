@@ -185,8 +185,7 @@
       "file": "文件"
     }
   },
-  "fetching_settings_failed": "获取设置失败",
-  "get_current_user_failed": "用户信息验证失败： ",
-  "overwrite_existing": "覆盖现有文件",
-  "Loading storage, please wait": "请稍等一会再刷新页面哦"
+  "fetching_settings_failed": "获取设置失败：",
+  "get_current_user_failed": "用户信息验证失败：",
+  "overwrite_existing": "覆盖现有文件"
 }
