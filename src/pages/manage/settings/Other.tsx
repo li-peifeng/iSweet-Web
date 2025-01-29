@@ -194,7 +194,7 @@ const OtherSettings = () => {
         onClick={async () => {
           const resp = await set115()
           handleResp(resp, (data) => {
-            notify.success(data)
+            notify.success(t("settings_other.set_ok"))
           })
         }}
       >
@@ -217,7 +217,7 @@ const OtherSettings = () => {
         onClick={async () => {
           const resp = await setPikPak()
           handleResp(resp, (data) => {
-            notify.success(data)
+            notify.success(t("settings_other.set_ok"))
           })
         }}
       >
@@ -240,7 +240,7 @@ const OtherSettings = () => {
         onClick={async () => {
           const resp = await setThunder()
           handleResp(resp, (data) => {
-            notify.success(data)
+            notify.success(t("settings_other.set_ok"))
           })
         }}
       >
