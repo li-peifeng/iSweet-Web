@@ -26,6 +26,7 @@
   "no_more": "* * * * *",
   "input_password": "请输入密码",
   "toolbar": {
+    "local_settings_auto": "设置成功，即将自动刷新",
     "more": "打开工具栏",
     "close": "关闭工具栏",
     "browser_setting": "浏览器设置",
