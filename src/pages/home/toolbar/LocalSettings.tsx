@@ -131,7 +131,7 @@ export const LocalSettings = () => {
                   localStorage.removeItem("hope-ui-color-mode")
                   notificationService.show({
                     status: "success",
-                    description: "{t("home.toolbar.local_settings_auto")}",
+                    description: "t("home.toolbar.local_settings_auto")",
                     closable: false,
                   })
                   setTimeout(function () {
