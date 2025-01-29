@@ -11,9 +11,12 @@
   "transmission": "Transmission",
   "set_transmission": "设置 Transmission",
   "115": "115",
+  "115_temp_dir": "115 缓存目录",
   "set_115": "设置 115",
   "pikpak": "PikPak",
+  "pikpak_temp_dir": "PikPak 缓存目录",
   "set_pikpak": "设置 PikPak",
   "thunder": "迅雷",
-  "set_thunder": "设置迅雷"
+  "set_thunder": "设置迅雷",
+  "thunder_temp_dir": "Thunder 缓存目录"
 }

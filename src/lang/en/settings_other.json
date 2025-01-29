@@ -11,9 +11,12 @@
   "transmission": "Transmission",
   "set_transmission": "Set Transmission",
   "115": "115",
+  "115_temp_dir": "115 Temp DIR",
   "set_115": "Set 115",
   "pikpak": "PikPak",
+  "pikpak_temp_dir": "PikPak Temp DIR",
   "set_pikpak": "Set PikPak",
   "thunder": "Thunder",
-  "set_thunder": "Set Thunder"
+  "set_thunder": "Set Thunder",
+  "thunder_temp_dir": "Thunder Temp DIR"
 }
