@@ -9,5 +9,7 @@
   "clear": "Clear",
   "login": "Login",
   "use_guest": "Guest",
-  "success": "Login successfully"
+  "success": "Login successfully",
+  "get_authorization": "Get Authorization",
+  "get_Account": "Get Account"
 }
