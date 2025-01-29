@@ -106,7 +106,7 @@ const Header = () => {
                     localStorage.removeItem("hope-ui-color-mode")
                     notificationService.show({
                       status: "success",
-                      description: "设置成功，即将自动刷新",
+                      description: t("home.toolbar.local_settings_auto"),
                       closable: false,
                     })
                     setTimeout(function () {
