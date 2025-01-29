@@ -249,7 +249,7 @@ const Login = () => {
               as={Link}
               href={`https://peifeng.li/request-account-authorization`}
             >
-              获取账户访问授权
+{t("login.get_authorization")}
             </Text>
           </Flex>
         </Show>
