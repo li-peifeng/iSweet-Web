@@ -52,7 +52,7 @@ const Password = (props: PasswordProps) => {
           columnGap="$1"
         >
           <Text color="$info9" as={Link} href={`https://peifeng.li/password`}>
-            获取授权
+            {t("login.get_Account")}
           </Text>
         </Flex>
         <HStack spacing="$2">
