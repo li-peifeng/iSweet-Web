@@ -26,6 +26,7 @@
   "no_more": "* * * * *",
   "input_password": "Please input password",
   "toolbar": {
+    "local_settings_auto": "Setup successful, will be refreshed automatically",
     "more": "open toolbar",
     "close": "close toolbar",
     "browser_setting": "browser setting",
