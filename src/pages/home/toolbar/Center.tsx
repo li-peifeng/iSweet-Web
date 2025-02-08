@@ -1,4 +1,4 @@
-import { Box, HStack, useColorModeValue } from "@hope-ui/solid"
+import { Box, HStack, useColorModeValue, Badge } from "@hope-ui/solid"
 import { createMemo, For, Show } from "solid-js"
 import {
   checkboxOpen,
@@ -7,6 +7,7 @@ import {
   selectAll,
   State,
   me,
+  selectedObjs,
 } from "~/store"
 import { CopyLink } from "./CopyLink"
 import { CenterIcon } from "./Icon"
@@ -49,6 +50,9 @@ export const Center = () => {
               backdropFilter: "blur(15px)",
             }}
           >
+            <Show when={haveSelected()}>
+              <Badge colorScheme="warning">{selectedObjs().length}</Badge>
+            </Show>
             <For each={["rename", "move", "copy", "delete"]}>
               {(name) => {
                 return (
