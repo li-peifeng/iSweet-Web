@@ -400,6 +400,8 @@
     "token": "令牌"
   },
   "GitHub Releases": {
+    "gh_proxy": "Gh proxy",
+    "gh_proxy-tips": "GitHub 代理, 例如: https://ghproxy.net/github.com 或 https://gh-proxy.com/github.com ",
     "repo_structure": "仓库结构",
     "repo_structure-tips": "结构：[路径：]org/repo",
     "root_folder_id": "根文件夹ID",

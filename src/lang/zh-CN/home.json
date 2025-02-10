@@ -188,5 +188,10 @@
   },
   "fetching_settings_failed": "请稍候，正在加载中...⏳",
   "get_current_user_failed": "用户信息验证失败：",
-  "overwrite_existing": "覆盖现有文件"
+  "overwrite_existing": "覆盖现有文件",
+  "conflict_policy": {
+    "cancel_if_exists": "如果文件存在则取消",
+    "overwrite_existing": "覆盖现有文件",
+    "skip_existing": "跳过现有文件"
+  }
 }
