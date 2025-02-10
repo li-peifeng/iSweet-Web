@@ -36,7 +36,7 @@ export const Copy = () => {
             setOverwrite(!overwrite())
           }}
         >
-          {t("home.overwrite_existing")}
+          {t("home.conflict_policy.overwrite_existing")}
         </Checkbox>
       }
       onSubmit={async (dst) => {
@@ -86,7 +86,7 @@ export const Move = () => {
             setOverwrite(!overwrite())
           }}
         >
-          {t("home.overwrite_existing")}
+          {t("home.conflict_policy.overwrite_existing")}
         </Checkbox>
       }
       onSubmit={async (dst) => {

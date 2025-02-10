@@ -38,7 +38,7 @@ export const Rename = () => {
               setOverwrite(!overwrite())
             }}
           >
-            {t("home.overwrite_existing")}
+            {t("home.conflict_policy.overwrite_existing")}
           </Checkbox>
         }
         isRenamingFile={!selectedObjs()[0].is_dir}

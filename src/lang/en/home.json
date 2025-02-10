@@ -183,5 +183,10 @@
   },
   "fetching_settings_failed": "Please wait, loading...⏳",
   "get_current_user_failed": "Failed get current user: ",
-  "overwrite_existing": "Overwrite existing"
+  "Loading storage, please wait": "Loading storage, please wait",
+  "conflict_policy": {
+    "cancel_if_exists": "Cancel if file exists",
+    "overwrite_existing": "Overwrite existing files",
+    "skip_existing": "Skip existing files"
+  }
 }

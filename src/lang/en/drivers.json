@@ -400,6 +400,8 @@
     "token": "Token"
   },
   "GitHub Releases": {
+    "gh_proxy": "Gh proxy",
+    "gh_proxy-tips": "GitHub proxy, e.g. https://ghproxy.net/github.com or https://gh-proxy.com/github.com ",
     "repo_structure": "Repo structure",
     "repo_structure-tips": "structure:[path:]org/repo",
     "root_folder_id": "Root folder id",

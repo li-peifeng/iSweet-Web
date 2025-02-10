@@ -33,7 +33,7 @@ export const NewFile = () => {
             setOverwrite(!overwrite())
           }}
         >
-          {t("home.overwrite_existing")}
+          {t("home.conflict_policy.overwrite_existing")}
         </Checkbox>
       }
       opened={isOpen()}
