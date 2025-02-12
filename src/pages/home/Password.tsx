@@ -45,16 +45,6 @@ const Password = (props: PasswordProps) => {
         onInput={(e) => props.setPassword(e.currentTarget.value)}
       />
       <HStack w="$full" justifyContent="space-between">
-        <Flex
-          fontSize="$sm"
-          color="$neutral10"
-          direction={{ "@initial": "column", "@sm": "row" }}
-          columnGap="$1"
-        >
-          <Text color="$info9" as={Link} href={`https://peifeng.li/password`}>
-            {t("login.get_Account")}
-          </Text>
-        </Flex>
         <HStack spacing="$2">
           <Button colorScheme="neutral" onClick={back}>
             {t("global.back")}
