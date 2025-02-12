@@ -10,6 +10,5 @@
   "login": "登录",
   "use_guest": "游客",
   "success": "登录成功",
-  "get_authorization": "获取账户访问授权",
-  "get_Account": "获取账户"
+  "help": "获取帮助"
 }

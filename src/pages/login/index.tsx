@@ -247,9 +247,9 @@ const Login = () => {
             <Text
               color="$success9"
               as={Link}
-              href={`https://peifeng.li/request-account-authorization`}
+              href={`https://peifeng.li/cloud-help`}
             >
-              {t("login.get_authorization")}
+              {t("login.help")}
             </Text>
           </Flex>
         </Show>
