@@ -24,7 +24,8 @@
     "offline_download": "Offline Download",
     "ldap": "LDAP",
     "s3": "S3",
-    "ftp": "FTP"
+    "ftp": "FTP",
+    "traffic": "Traffic"
   },
   "title": "iSweet • Admin",
   "not_admin": "You are not admin user, please login with admin account.",

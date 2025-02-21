@@ -12,6 +12,7 @@ export enum Group {
   LDAP,
   S3,
   FTP,
+  TRAFFIC,
 }
 export enum Flag {
   PUBLIC,

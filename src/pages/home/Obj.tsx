@@ -1,6 +1,7 @@
 import { Text, useColorModeValue, VStack } from "@hope-ui/solid"
 import {
   createEffect,
+  createMemo,
   createSignal,
   lazy,
   Match,
@@ -11,6 +12,7 @@ import {
 import { Error, FullLoading, LinkWithBase } from "~/components"
 import { resetGlobalPage, useObjTitle, usePath, useRouter, useT } from "~/hooks"
 import {
+  getPagination,
   objStore,
   password,
   recordHistory,
@@ -31,19 +33,27 @@ let first = true
 export const Obj = () => {
   const t = useT()
   const cardBg = useColorModeValue("white", "$neutral3")
-  const { pathname } = useRouter()
+  const { pathname, searchParams } = useRouter()
   const { handlePathChange, refresh } = usePath()
+  const pagination = getPagination()
+  const page = createMemo(() => {
+    return pagination.type === "pagination"
+      ? parseInt(searchParams["page"]) || 1
+      : undefined
+  })
   let lastPathname = pathname()
+  let lastPage = page()
   createEffect(
-    on(pathname, (pathname) => {
+    on([pathname, page], async ([pathname, page]) => {
       useObjTitle()
       if (!first) {
-        recordHistory(lastPathname)
+        recordHistory(lastPathname, lastPage)
         resetGlobalPage()
       }
       first = false
-      handlePathChange(pathname)
+      await handlePathChange(pathname, page)
       lastPathname = pathname
+      lastPage = page
     }),
   )
   return (

@@ -12,7 +12,7 @@ import {
   Checkbox,
   Icon,
 } from "@hope-ui/solid"
-import { createMemo, createSignal, Show } from "solid-js"
+import { createMemo, createSignal, Show, onMount } from "solid-js"
 import { SwitchColorMode, SwitchLanguageWhite } from "~/components"
 import { useFetch, useT, useTitle, useRouter } from "~/hooks"
 import {
@@ -99,9 +99,64 @@ const Login = () => {
       r.get("/authn/webauthn_begin_login?username=" + username),
   )
   const { searchParams, to } = useRouter()
+  const isAuthnConditionalAvailable = async (): Promise<boolean> => {
+    if (
+      PublicKeyCredential &&
+      "isConditionalMediationAvailable" in PublicKeyCredential
+    ) {
+      // @ts-expect-error
+      return await PublicKeyCredential.isConditionalMediationAvailable()
+    } else {
+      return false
+    }
+  }
   const AuthnSignEnabled = getSettingBool("webauthn_login_enabled")
   const AuthnSwitch = async () => {
     setuseauthn(!useauthn())
+  }
+  const AuthnLogin = async (conditional?: boolean) => {
+    if (!supported()) {
+      if (!conditional) {
+        notify.error(t("users.webauthn_not_supported"))
+      }
+      return
+    }
+    if (conditional && !(await isAuthnConditionalAvailable())) {
+      return
+    }
+    changeToken()
+    const username_login: string = conditional ? "" : username()
+    if (!conditional && remember() === "true") {
+      localStorage.setItem("username", username())
+    } else {
+      localStorage.removeItem("username")
+    }
+    const resp = await getauthntemp(username_login)
+    handleResp(resp, async (data) => {
+      try {
+        const options = parseRequestOptionsFromJSON(data.options)
+        if (conditional) {
+          // @ts-expect-error
+          options.mediation = "conditional"
+        }
+        const credentials = await get(options)
+        const resp = await postauthnlogin(
+          data.session,
+          credentials,
+          username_login,
+        )
+        handleRespWithoutNotify(resp, (data) => {
+          notify.success(t("login.success"))
+          changeToken(data.token)
+          to(
+            decodeURIComponent(searchParams.redirect || base_path || "/"),
+            true,
+          )
+        })
+      } catch (error: unknown) {
+        if (error instanceof Error) notify.error(error.message)
+      }
+    })
   }
   const Login = async () => {
     if (!useauthn()) {
@@ -132,38 +187,7 @@ const Login = () => {
         },
       )
     } else {
-      if (!supported()) {
-        notify.error(t("users.webauthn_not_supported"))
-        return
-      }
-      changeToken()
-      if (remember() === "true") {
-        localStorage.setItem("username", username())
-      } else {
-        localStorage.removeItem("username")
-      }
-      const resp = await getauthntemp(username())
-      handleResp(resp, async (data) => {
-        try {
-          const options = parseRequestOptionsFromJSON(data.options)
-          const credentials = await get(options)
-          const resp = await postauthnlogin(
-            data.session,
-            credentials,
-            username(),
-          )
-          handleRespWithoutNotify(resp, (data) => {
-            notify.success(t("login.success"))
-            changeToken(data.token)
-            to(
-              decodeURIComponent(searchParams.redirect || base_path || "/"),
-              true,
-            )
-          })
-        } catch (error: unknown) {
-          if (error instanceof Error) notify.error(error.message)
-        }
-      })
+      await AuthnLogin()
     }
   }
   const [needOpt, setNeedOpt] = createSignal(false)
@@ -172,6 +196,10 @@ const Login = () => {
   if (ldapLoginEnabled) {
     setUseLdap(true)
   }
+
+  onMount(() => {
+    AuthnLogin(true)
+  })
 
   return (
     <Center zIndex="1" w="$full" h="100vh">

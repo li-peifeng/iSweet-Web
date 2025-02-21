@@ -75,9 +75,60 @@ export const BatchRename = () => {
       matchNames = selectedObjs()
         .filter((obj) => obj.name.match(srcName()))
         .map((obj) => {
+          const created = new Date(obj.created)
+          const modified = new Date(obj.modified)
           const renameObj: RenameObj = {
             src_name: obj.name,
-            new_name: obj.name.replace(replaceRegexp, newName()),
+            new_name: obj.name
+              .replace(replaceRegexp, newName())
+              .replace(
+                "{created_year}",
+                created.getFullYear().toString().padStart(4, "0"),
+              )
+              .replace(
+                "{created_month}",
+                (created.getMonth() + 1).toString().padStart(2, "0"),
+              )
+              .replace(
+                "{created_date}",
+                created.getDate().toString().padStart(2, "0"),
+              )
+              .replace(
+                "{created_hour}",
+                created.getHours().toString().padStart(2, "0"),
+              )
+              .replace(
+                "{created_minute}",
+                created.getMinutes().toString().padStart(2, "0"),
+              )
+              .replace(
+                "{created_second}",
+                created.getSeconds().toString().padStart(2, "0"),
+              )
+              .replace(
+                "{modified_year}",
+                modified.getFullYear().toString().padStart(4, "0"),
+              )
+              .replace(
+                "{modified_month}",
+                (modified.getMonth() + 1).toString().padStart(2, "0"),
+              )
+              .replace(
+                "{modified_date}",
+                modified.getDate().toString().padStart(2, "0"),
+              )
+              .replace(
+                "{modified_hour}",
+                modified.getHours().toString().padStart(2, "0"),
+              )
+              .replace(
+                "{modified_minute}",
+                modified.getMinutes().toString().padStart(2, "0"),
+              )
+              .replace(
+                "{modified_second}",
+                modified.getSeconds().toString().padStart(2, "0"),
+              ),
           }
           return renameObj
         })

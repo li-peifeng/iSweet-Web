@@ -13,6 +13,7 @@ import {
   BsSearch,
   BsBucket,
   BsHddNetwork,
+  BsArrowLeftRight,
 } from "solid-icons/bs"
 import { FiLogIn } from "solid-icons/fi"
 import { SiMetabase } from "solid-icons/si"
@@ -91,6 +92,12 @@ export const side_menu_items: SideMenuItem[] = [
         icon: BsHddNetwork,
         to: "/@manage/settings/ftp",
         component: () => <CommonSettings group={Group.FTP} />,
+      },
+      {
+        title: "manage.sidemenu.traffic",
+        icon: BsArrowLeftRight,
+        to: "/@manage/settings/traffic",
+        component: () => <CommonSettings group={Group.TRAFFIC} />,
       },
       {
         title: "manage.sidemenu.other",
