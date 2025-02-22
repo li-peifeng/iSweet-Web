@@ -1,0 +1,23 @@
+{
+  "aria2": "Aria2",
+  "aria2_version": "Aria2 版本：",
+  "set_aria2": "設定 Aria2",
+  "copy_token": "複製 Token",
+  "reset_token": "重設 token",
+  "reset_token_success": "重設 Token 成功",
+  "unknown_type": "未知類型",
+  "set_qbit": "設定 qBittorrent",
+  "qbittorrent": "qBittorrent",
+  "transmission": "Transmission",
+  "set_transmission": "設定 Transmission",
+  "115": "115",
+  "115_temp_dir": "115 快取目錄",
+  "set_115": "設定 115",
+  "pikpak": "PikPak",
+  "pikpak_temp_dir": "PikPak 快取目錄",
+  "set_pikpak": "設定 PikPak",
+  "thunder": "Thunder",
+  "set_thunder": "設定 Thunder",
+  "thunder_temp_dir": "Thunder 快取目錄",
+  "set_ok": "設定已完成"
+}

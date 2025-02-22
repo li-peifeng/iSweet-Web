@@ -1,0 +1,196 @@
+{
+  "obj": {
+    "name": "名稱",
+    "size": "大小",
+    "modified": "修改時間"
+  },
+  "preview": {
+    "download": "下載",
+    "failed_load_img": "載入圖像失敗",
+    "open_with": "使用... 打開",
+    "play_with": "選擇播放器",
+    "install": "安裝",
+    "installing": "正在安裝",
+    "tr-install": "巨魔商店",
+    "tr-installing": "巨魔正在安裝",
+    "open_in_new_window": "於新視窗中開啟",
+    "auto_next": "自動下一個"
+  },
+  "layouts": {
+    "list": "清單檢視",
+    "grid": "網格檢視",
+    "image": "圖片檢視"
+  },
+  "no_images": "目前資料夾沒有圖片哦",
+  "load_more": "載入更多",
+  "no_more": "* * * * *",
+  "input_password": "請輸入密碼",
+  "toolbar": {
+    "local_settings_auto": "設定成功，即將自動刷新",
+    "more": "打開工具列",
+    "close": "關閉工具列",
+    "browser_setting": "瀏覽器設定",
+    "refresh": "刷新",
+    "toggle_theme": "切換主題",
+    "toggle_theme_auto": "自動切換主題",
+    "switch_lang": "切換語言",
+    "toggle_markdown_toc": "切換輪廓",
+    "toggle_checkbox": "切換核取方塊",
+    "rename": "重命名",
+    "input_new_name": "請輸入新名稱",
+    "only_one-tips": "只能選擇一個哦",
+    "move": "移動",
+    "copy": "複製",
+    "choose_dst_folder": "選擇目標資料夾",
+    "delete": "刪除",
+    "delete-tips": "確定要刪除所選對象嗎?",
+    "decompress": "解壓縮",
+    "decompress-pass": "提取密碼: ",
+    "decompress-cache-full": "將快取內容全部存入暫存文件",
+    "decompress-put-into-new": "解壓縮到新的子資料夾",
+    "extract": "解壓縮至",
+    "archive": {
+      "input_password": "請輸入提取密碼",
+      "incorrect_password": "密碼錯誤",
+      "extract_header": "提取 {{path}} 至..."
+    },
+    "copy_link": "複製連結",
+    "preview_page": "預覽頁面",
+    "down_link": "下載連結",
+    "encode_down_link": "編碼下載連結",
+    "mkdir": "新增資料夾",
+    "input_dir_name": "輸入資料夾名稱",
+    "new_file": "新增檔案",
+    "input_filename": "輸入檔名",
+    "cancel_select": "取消選擇",
+    "offline_download": "離線下載",
+    "offline_download-tips": "每行一條連結",
+    "delete_policy": {
+      "delete_on_upload_succeed": "上傳成功後刪除",
+      "delete_on_upload_failed": "上傳失敗時刪除",
+      "delete_never": "從不刪除",
+      "delete_always": "總是刪除"
+    },
+    "download": "下載",
+    "batch_download": "批次下載",
+    "package_download": "整包壓縮下載",
+    "package_download_disabled": "整包壓縮下載已關閉",
+    "send_aria2": "發送到aria2",
+    "aria2_not_set": "請設定 aria2 rpc url",
+    "aria2_set_error": "任務發送失敗，請檢查配置",
+    "send_aria2_success": "成功發送到aria2",
+    "pre_package_download-tips": "在瀏覽器中使用 streamsaver 而不是伺服器來進行整包下載需要相應的儲存空間支援 CORS，而不支援的儲存空間將失敗。",
+    "package_download-tips": "正在下載，請稍候不要關閉頁面哦",
+    "playlist_download": "播放列表下載",
+    "upload": "上傳",
+    "local_settings": "本機設定",
+    "recursive_move": "遞迴移動",
+    "recursive_move_directory-tips": "您確定要將目前的資料夾及其子資料夾中的所有檔案移至指定的資料夾嗎？",
+    "remove_empty_directory": "拿掉空的子目錄",
+    "remove_empty_directory-tips": "您確定要刪除所有空子資料夾嗎？",
+    "batch_rename": "批次重新命名",
+    "regex_rename": "正則表達式重新命名",
+    "sequential_renaming": "順序重新命名",
+    "regex_rename_preview": "更改的檔案",
+    "regex_rename_preview_old_name": "舊名稱",
+    "regex_rename_preview_new_name": "新名稱",
+    "regular_rename": "正則表達式檔重新命名。 在第一行輸入源檔名正則表達式，並在第二行輸入新檔名正則表達式。",
+    "sequential_renaming_desc": "新檔名將有一個數值起始值， 並且它將通過向起始值加 1 來按順序顯示。 在第一行輸入新的檔名，並在第二行輸入起始值。"
+  },
+  "upload": {
+    "add_as_task": "新增為任務",
+    "try_rapid": "嘗試秒傳",
+    "upload-tips": "拖動文件到此處以上傳，或點擊：",
+    "release": "放開來上傳",
+    "no_files_drag": "沒有檔案被拖入。",
+    "upload_files": "選擇檔案",
+    "upload_folder": "選擇資料夾",
+    "pending": "等待中",
+    "uploading": "上傳中",
+    "backending": "正在後臺上傳",
+    "success": "成功",
+    "error": "錯誤",
+    "back": "返回上傳",
+    "stream": "串流式",
+    "from": "表單",
+    "clear_done": "清空完成"
+  },
+  "local_settings": {
+    "aria2_rpc_url": "Aria2 RPC 網址",
+    "aria2_rpc_secret": "Aria2 RPC 密鑰",
+    "aria2_dir": "Aria2 下載目錄",
+    "show_folder_in_image_view": "在圖片檢視中顯示資料夾",
+    "show_folder_in_image_view_options": {
+      "top": "上方",
+      "bottom": "下方",
+      "none": "無"
+    },
+    "global_default_layout": "預設全域版面",
+    "global_default_layout_options": {
+      "list": "清單檢視",
+      "grid": "網格檢視",
+      "image": "圖片檢視"
+    },
+    "position_of_header_navbar": "標題欄和導航欄的位置",
+    "position_of_header_navbar_options": {
+      "static": "正常",
+      "sticky": "吸附到頁面頂部",
+      "only_navbar_sticky": "僅吸附導航欄"
+    },
+    "show_sidebar": "顯示側邊欄",
+    "show_sidebar_options": {
+      "none": "無",
+      "visible": "顯示"
+    },
+    "list_item_filename_overflow": "清單項目檔名過長",
+    "list_item_filename_overflow_options": {
+      "ellipsis": "省略號",
+      "scrollable": "可滾動",
+      "multi_line": "多行顯示"
+    },
+    "open_item_on_checkbox": "在核取方塊上打開選項",
+    "open_item_on_checkbox_options": {
+      "direct": "直接打開",
+      "disable_while_checked": "選中時禁用",
+      "with_ctrl": "使用 Ctrl/Command 按鍵打開",
+      "with_alt": "使用 Alt/Option 按鍵打開"
+    },
+    "filename_scrollable": "長檔名滾動條",
+    "grid_item_size": "圖示大小",
+    "select_with_mouse": "在複選框關閉時使用滑鼠選擇項目",
+    "select_with_mouse_options": {
+      "disabled": "停用",
+      "open_item_with_dblclick": "雙擊打開"
+    }
+  },
+  "package_download": {
+    "current_status": "當前狀態",
+    "initializing": "正在初始化",
+    "fetching_struct": "正在取得資料夾結構",
+    "fetching_struct_failed": "取得資料夾結構失敗",
+    "downloading": "稍等，別關閉頁面哦",
+    "failed": "打包下載失敗",
+    "success": "下載完成，太棒了！"
+  },
+  "footer": {
+    "powered_by": "PeiFeng.Li",
+    "manage": "iSweet • 2025",
+    "guest": "iSweet • 2025"
+  },
+  "search": {
+    "search": "搜索",
+    "no_result": "iSweet • Search",
+    "scopes": {
+      "all": "全部",
+      "folder": "目录",
+      "file": "文件"
+    }
+  },
+  "fetching_settings_failed": "請稍候，正在加載中...⏳",
+  "get_current_user_failed": "用戶資訊驗證失敗：",
+  "conflict_policy": {
+    "cancel_if_exists": "如果檔案存在則取消",
+    "overwrite_existing": "覆蓋現有文件",
+    "skip_existing": "跳過現有文件"
+  }
+}

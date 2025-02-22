@@ -1,0 +1,17 @@
+{
+  "backup": "備份",
+  "restore": "還原",
+  "start_backup": "開始備份",
+  "finish_backup": "備份完成",
+  "success_backup_item": "[ {{item}} ] 備份成功",
+  "failed_backup_item": "[ {{item}} ] 備份失敗",
+  "no_file": "未選擇檔案",
+  "start_restore": "開始還原",
+  "finish_restore": "還原完成",
+  "success_restore_item": "[ {{item}} ] 還原成功",
+  "failed_restore_item": "[ {{item}} ] 還原失敗",
+  "override": "取代",
+  "encrypt_password_placeholder": "如果您不需要加密，請留空",
+  "encrypt_password": "加密密碼",
+  "wrong_encrypt_password": "加密密碼錯誤"
+}

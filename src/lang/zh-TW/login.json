@@ -1,0 +1,13 @@
+{
+  "login_to": "登入到",
+  "username-tips": "輸入您的使用者名稱",
+  "password-tips": "輸入您的密碼",
+  "otp-tips": "輸入您的一次性密碼",
+  "remember": "記住資料",
+  "forget": "忘記密碼？",
+  "forget_url": "https://peifeng.li/messages",
+  "clear": "清除",
+  "login": "登入",
+  "use_guest": "訪客",
+  "success": "登入成功"
+}

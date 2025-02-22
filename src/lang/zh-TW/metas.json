@@ -1,0 +1,12 @@
+{
+  "path": "路徑",
+  "password": "密碼",
+  "write": "寫入",
+  "hide": "隱藏",
+  "readme": "說明",
+  "readme_help": "在底部渲染一個 Markdown，支持內容或鏈接",
+  "header": "頂部說明",
+  "header_help": "在頂部渲染一個 Markdown，支持內容或鏈接",
+  "apply_sub": "應用到子文件夾",
+  "hide_help": "每行一個正則表達式"
+}
