@@ -38,7 +38,7 @@ const Header = () => {
     handleResp(await logOutReq(), () => {
       changeToken()
       notify.success(t("manage.logout_success"))
-      to("/")
+      window.location.href = "/"
     })
   }
   return (
@@ -79,11 +79,7 @@ const Header = () => {
           <IconButton
             aria-label="logout"
             icon={<IoExit />}
-            onClick={() => {
-              changeToken()
-              notify.success(t("manage.logout_success"))
-              to("/")
-            }}
+            onClick={logOut}
             size="sm"
           />
         </HStack>
