@@ -68,6 +68,7 @@
     "load_more": "加载更多",
     "pagination": "分页显示"
   },
+  "preview_archives_by_default": "压缩文件预览",
   "privacy_regs": "隐私内容正则表达式",
   "proxy_ignore_headers": "代理忽略头部",
   "proxy_types": "代理类型",

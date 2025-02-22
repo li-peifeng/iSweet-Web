@@ -9,5 +9,6 @@
   "clear": "清除",
   "login": "登入",
   "use_guest": "訪客",
-  "success": "登入成功"
+  "success": "登入成功",
+  "help": "獲取協助"
 }
