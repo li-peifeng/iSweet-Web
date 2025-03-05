@@ -310,20 +310,21 @@ export const Task = (props: TaskAttribute & TasksProps & TaskLocalSetter) => {
             </Show>
             <Show when={matches !== null}>
               <For each={Object.entries(props.nameAnalyzer.attrs)}>
-                {(entry) => (
-                  <>
-                    <GridItem
-                      color="$neutral9"
-                      textAlign="right"
-                      css={{ whiteSpace: "nowrap" }}
-                    >
-                      {entry[0]}
-                    </GridItem>
-                    <GridItem color="$neutral9">
-                      {entry[1](matches as RegExpMatchArray)}
-                    </GridItem>
-                  </>
-                )}
+                {(entry) => {
+                  const value = entry[1](matches as RegExpMatchArray)
+                  return value === undefined ? null : (
+                    <Show when={entry[1] !== undefined}>
+                      <GridItem
+                        color="$neutral9"
+                        textAlign="right"
+                        css={{ whiteSpace: "nowrap" }}
+                      >
+                        {entry[0]}
+                      </GridItem>
+                      <GridItem color="$neutral9">{value}</GridItem>
+                    </Show>
+                  )
+                }}
               </For>
             </Show>
             <GridItem

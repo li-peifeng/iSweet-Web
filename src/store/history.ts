@@ -33,6 +33,7 @@ export const recordHistory = (path: string, page?: number) => {
     page: page ?? getGlobalPage(),
     scroll: window.scrollY,
   }
+  console.log(`record history: [${key}]`)
   HistoryMap.set(key, history)
 }
 

@@ -48,6 +48,7 @@
       "url": "URL",
       "path": "Destination Path",
       "transfer_src": "Source Path",
+      "transfer_src_local": "Source Path (Local)",
       "transfer_dst": "Destination Path"
     },
     "decompress": {

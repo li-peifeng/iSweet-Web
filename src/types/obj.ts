@@ -12,6 +12,7 @@ export interface Obj {
   name: string
   size: number
   is_dir: boolean
+  created: string
   modified: string
   sign?: string
   thumb: string
