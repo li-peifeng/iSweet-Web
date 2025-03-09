@@ -48,6 +48,7 @@
       "url": "链接地址",
       "path": "目标路径",
       "transfer_src": "源路径",
+      "transfer_src_local": "源路径 (本地)",
       "transfer_dst": "目标路径"
     },
     "decompress": {
