@@ -151,9 +151,8 @@
     "open_item_on_checkbox": "在核取方塊上打開選項",
     "open_item_on_checkbox_options": {
       "direct": "直接打開",
-      "disable_while_checked": "選中時禁用",
-      "with_ctrl": "使用 Ctrl/Command 按鍵打開",
-      "with_alt": "使用 Alt/Option 按鍵打開"
+      "dblclick": "雙擊打開",
+      "disable_while_checked": "選中時禁用"
     },
     "filename_scrollable": "長檔名滾動條",
     "grid_item_size": "圖示大小",

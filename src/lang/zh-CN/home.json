@@ -151,9 +151,8 @@
     "open_item_on_checkbox": "打开选中项",
     "open_item_on_checkbox_options": {
       "direct": "直接打开",
-      "disable_while_checked": "选中时禁用",
-      "with_ctrl": "用 Ctrl/Command 选住",
-      "with_alt": "用 Alt/Option 选住"
+      "dblclick": "双击打开",
+      "disable_while_checked": "选中时禁用"
     },
     "filename_scrollable": "长文件名滚动条",
     "grid_item_size": "图标大小",
