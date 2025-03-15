@@ -37,6 +37,13 @@ export const recordHistory = (path: string, page?: number) => {
   HistoryMap.set(key, history)
 }
 
+export const recordScroll = (path: string, page?: number) => {
+  const key = getHistoryKey(path, page)
+  if (!HistoryMap.has(key)) return
+  const history = HistoryMap.get(key)!
+  history.scroll = window.scrollY
+}
+
 export const recoverHistory = async (path: string, page?: number) => {
   const key = getHistoryKey(path, page)
   if (!HistoryMap.has(key)) return
@@ -44,9 +51,9 @@ export const recoverHistory = async (path: string, page?: number) => {
   setGlobalPage(history.page)
   ObjStore.setState(State.Initial)
   await waitForNextFrame()
-  ObjStore.set(history.obj)
+  ObjStore.set(JSON.parse(JSON.stringify(history.obj)))
   await waitForNextFrame()
-  window.scroll({ top: history.scroll, behavior: "smooth" })
+  window.scroll({ top: history.scroll })
 }
 
 export const hasHistory = (path: string, page?: number) => {

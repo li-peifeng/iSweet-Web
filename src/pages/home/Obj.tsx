@@ -15,6 +15,7 @@ import {
   getPagination,
   objStore,
   password,
+  recordScroll,
   setPassword,
   /*layout,*/ State,
 } from "~/store"
@@ -39,8 +40,15 @@ export const Obj = () => {
       ? parseInt(searchParams["page"]) || 1
       : undefined
   })
+  let lastPathname: string
+  let lastPage: number | undefined
   createEffect(
     on([pathname, page], async ([pathname, page]) => {
+      if (lastPathname) {
+        recordScroll(lastPathname, lastPage)
+      }
+      lastPathname = pathname
+      lastPage = page
       useObjTitle()
       await handlePathChange(pathname, page)
     }),
