@@ -233,6 +233,7 @@
       "crack": "非官方",
       "official": "官方"
     },
+    "low_bandwith_upload_mode": "低带宽上传模式",
     "order_by": "排序",
     "order_bys": {
       "name": "名称",
@@ -377,6 +378,7 @@
     "user_ip-tips": "用户IP地址用于下载链接，可以加快下载"
   },
   "FeijiPan": {
+    "ip": "IP",
     "password": "密码",
     "root_folder_id": "根文件夹ID",
     "username": "用户名"
@@ -388,6 +390,10 @@
     "committer_name": "提交者名称",
     "copy_commit_message": "复制操作提交消息",
     "delete_commit_message": "删除操作提交消息",
+    "gh_proxy": "Gh 代理",
+    "gh_proxy-tips": "GitHub 代理, 例如: https://ghproxy.net/raw.githubusercontent.com 或者 https://gh-proxy.com/raw.githubusercontent.com",
+    "gpg_key_passphrase": "GPG 密钥密码",
+    "gpg_private_key": "GPG 私人密钥",
     "mkdir_commit_message": "创建文件夹操作提交消息",
     "move_commit_message": "移动操作提交消息",
     "owner": "所有者",
@@ -445,6 +451,7 @@
     "upload_thread-tips": "1<=线程<=32"
   },
   "ILanZou": {
+    "ip": "IP",
     "password": "密码",
     "root_folder_id": "根文件夹ID",
     "username": "用户名"

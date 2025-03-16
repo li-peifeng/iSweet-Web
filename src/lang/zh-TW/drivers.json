@@ -233,6 +233,7 @@
       "crack": "非官方",
       "official": "官方"
     },
+    "low_bandwith_upload_mode": "低帶寬上傳模式",
     "order_by": "排序",
     "order_bys": {
       "name": "名稱",
@@ -377,40 +378,45 @@
     "user_ip-tips": "user ip address for download link which can speed up the download"
   },
   "FeijiPan": {
+    "ip": "IP",
     "password": "密碼",
     "root_folder_id": "根資料夾ID",
     "username": "使用者名稱"
   },
   "GitHub API": {
-    "author_email": "Author email",
-    "author_name": "Author name",
-    "committer_email": "Committer email",
-    "committer_name": "Committer name",
-    "copy_commit_message": "Copy commit message",
-    "delete_commit_message": "Delete commit message",
-    "mkdir_commit_message": "Mkdir commit message",
-    "move_commit_message": "Move commit message",
-    "owner": "Owner",
-    "put_commit_message": "Put commit message",
+    "author_email": "修改作者電子郵件",
+    "author_name": "修改作者名稱",
+    "committer_email": "提交者電子郵件",
+    "committer_name": "提交者名稱",
+    "copy_commit_message": "複製操作提交訊息",
+    "delete_commit_message": "刪除操作提交訊息",
+    "gh_proxy": "Gh 代理",
+    "gh_proxy-tips": "GitHub 代理, 例如: https://ghproxy.net/raw.githubusercontent.com 或 https://gh-proxy.com/raw.githubusercontent.com",
+    "gpg_key_passphrase": "GPG 金鑰密碼",
+    "gpg_private_key": "GPG 私人金鑰",
+    "mkdir_commit_message": "建立資料夾操作提交訊息",
+    "move_commit_message": "行動操作提交訊息",
+    "owner": "擁有者",
+    "put_commit_message": "上傳操作提交訊息",
     "ref": "Ref",
-    "ref-tips": "A branch, a tag or a commit SHA, main branch by default.",
-    "rename_commit_message": "Rename commit message",
-    "repo": "Repo",
+    "ref-tips": "分支名稱、標籤或提交 SHA，不填寫使用預設主分支。",
+    "rename_commit_message": "重新命名操作提交訊息",
+    "repo": "倉儲",
     "root_folder_path": "根資料夾路徑",
-    "token": "Token"
+    "token": "令牌"
   },
   "GitHub Releases": {
     "gh_proxy": "Gh proxy",
-    "gh_proxy-tips": "GitHub proxy, e.g. https://ghproxy.net/github.com or https://gh-proxy.com/github.com ",
-    "repo_structure": "Repo structure",
-    "repo_structure-tips": "structure:[path:]org/repo",
+    "gh_proxy-tips": "GitHub 代理, 例如: https://ghproxy.net/github.com 或 https://gh-proxy.com/github.com ",
+    "repo_structure": "倉儲結構",
+    "repo_structure-tips": "結構：[路徑：]org/repo",
     "root_folder_id": "根資料夾ID",
-    "show_all_version": "Show all version",
-    "show_all_version-tips": "show all versions",
-    "show_readme": "Show readme",
-    "show_readme-tips": "show README、LICENSE file",
-    "token": "Token",
-    "token-tips": "GitHub token, if you want to access private repositories or increase the rate limit"
+    "show_all_version": "顯示所有版本",
+    "show_all_version-tips": "顯示所有版本",
+    "show_readme": "顯示閱讀次數",
+    "show_readme-tips": "顯示 READMEC 文件，LICENSE 文件",
+    "token": "令牌",
+    "token-tips": "GitHub 令牌，如果您想要存取私有倉庫或提高費率限制"
   },
   "GoogleDrive": {
     "chunk_size": "分片大小",
@@ -445,6 +451,7 @@
     "upload_thread-tips": "1 <= thread <= 32"
   },
   "ILanZou": {
+    "ip": "IP",
     "password": "密碼",
     "root_folder_id": "根資料夾ID",
     "username": "使用者名稱"
