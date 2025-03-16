@@ -21,6 +21,22 @@
     "qrcode_token-tips": "one of QR code token and cookie required",
     "root_folder_id": "Root folder id"
   },
+  "115 Open": {
+    "order_by": "Order by",
+    "order_bys": {
+      "file_name": "File name",
+      "file_size": "File size",
+      "file_type": "File type",
+      "user_utime": "User utime"
+    },
+    "order_direction": "Order direction",
+    "order_directions": {
+      "asc": "Asc",
+      "desc": "Desc"
+    },
+    "refresh_token": "Refresh token",
+    "root_folder_id": "Root folder id"
+  },
   "115 Share": {
     "cookie": "Cookie",
     "cookie-tips": "one of QR code token and cookie required",
@@ -1036,6 +1052,7 @@
   },
   "config": {
     "115 Cloud": {},
+    "115 Open": {},
     "115 Share": {},
     "123Pan": {},
     "123PanLink": {},
@@ -1117,6 +1134,7 @@
   },
   "drivers": {
     "115 Cloud": "115 Cloud",
+    "115 Open": "115 Open",
     "115 Share": "115 Share",
     "123Pan": "123Pan",
     "123PanLink": "123PanLink",
