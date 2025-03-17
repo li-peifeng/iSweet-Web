@@ -21,6 +21,22 @@
     "qrcode_token-tips": "需要 QR code Token 和 cookie 其中一個",
     "root_folder_id": "根資料夾ID"
   },
+  "115 Open": {
+    "order_by": "排序",
+    "order_bys": {
+      "file_name": "名稱",
+      "file_size": "大小",
+      "file_type": "類型",
+      "user_utime": "修改時間"
+    },
+    "order_direction": "排序方式",
+    "order_directions": {
+      "asc": "升序",
+      "desc": "降序"
+    },
+    "refresh_token": "更新 Token",
+    "root_folder_id": "根資料夾ID"
+  },
   "115 Share": {
     "cookie": "Cookie",
     "cookie-tips": "需要 QR 代碼令牌和 cookie 中的一個",
@@ -1036,6 +1052,7 @@
   },
   "config": {
     "115 Cloud": {},
+    "115 Open": {},
     "115 Share": {},
     "123Pan": {},
     "123PanLink": {},
@@ -1117,6 +1134,7 @@
   },
   "drivers": {
     "115 Cloud": "115 網盤",
+    "115 Open": "115 Open",
     "115 Share": "115 雲盤分享",
     "123Pan": "123雲盤",
     "123PanLink": "123雲盤直鏈",

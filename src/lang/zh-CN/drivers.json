@@ -21,6 +21,22 @@
     "qrcode_token-tips": "需要 QR 代码令牌和 cookie 中的一个",
     "root_folder_id": "根文件夹ID"
   },
+  "115 Open": {
+    "order_by": "排序",
+    "order_bys": {
+      "file_name": "名称",
+      "file_size": "大小",
+      "file_type": "类型",
+      "user_utime": "修改时间"
+    },
+    "order_direction": "排序方式",
+    "order_directions": {
+      "asc": "升序",
+      "desc": "降序"
+    },
+    "refresh_token": "刷新令牌",
+    "root_folder_id": "根文件夹ID"
+  },
   "115 Share": {
     "cookie": "Cookie",
     "cookie-tips": "需要 QR 代码令牌和 cookie 中的一个",
@@ -1040,6 +1056,7 @@
   },
   "config": {
     "115 Cloud": {},
+    "115 Open": {},
     "115 Share": {},
     "123Pan": {},
     "123PanLink": {},
@@ -1121,6 +1138,7 @@
   },
   "drivers": {
     "115 Cloud": "115 网盘",
+    "115 Open": "115 Open",
     "115 Share": "115 云盘分享",
     "123Pan": "123云盘",
     "123PanLink": "123云盘直链",
