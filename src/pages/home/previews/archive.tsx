@@ -161,7 +161,7 @@ const ContextMenu = () => {
           return props.obj.is_dir
         }}
         onClick={({ props }) => {
-          download(props.url + "&attachment=true")
+          download(props.url)
         }}
       >
         <ItemContent name="download" />
@@ -426,9 +426,9 @@ const Preview = () => {
                     "/" +
                     obj.name
                   if (!obj.is_dir) {
-                    url = raw_url + "?inner=" + encodePath(innerPath)
+                    url = raw_url + "?inner=" + encodePath(innerPath, true)
                     if (archive_pass !== "") {
-                      url = url + "&pass=" + encodePath(archive_pass)
+                      url = url + "&pass=" + encodeURIComponent(archive_pass)
                     }
                     if (sign !== "") {
                       url = url + "&sign=" + sign

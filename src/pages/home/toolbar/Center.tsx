@@ -53,7 +53,7 @@ export const Center = () => {
             <Show when={haveSelected()}>
               <Badge colorScheme="warning">{selectedObjs().length}</Badge>
             </Show>
-            <For each={["rename", "move", "copy", "delete"]}>
+            <For each={["rename", "move", "copy", "delete", "decompress"]}>
               {(name) => {
                 return (
                   <CenterIcon

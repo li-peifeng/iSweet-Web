@@ -144,6 +144,7 @@
     "url": "Url"
   },
   "AList V3": {
+    "forward_archive_requests": "Forward archive requests",
     "meta_password": "Meta password",
     "pass_ua_to_upsteam": "Pass ua to upsteam",
     "password": "Password",
@@ -159,7 +160,8 @@
     "download_part_size-tips": "Need to enable proxy. Unit: KB",
     "paths": "Paths",
     "protect_same_name": "Protect same name",
-    "protect_same_name-tips": "Protects same-name files from Delete or Rename"
+    "protect_same_name-tips": "Protects same-name files from Delete or Rename",
+    "writable": "Writable"
   },
   "Aliyundrive": {
     "internal_upload": "Internal upload",
@@ -356,6 +358,10 @@
     "secret_access_key": "Secret access key",
     "session_token": "Session token",
     "sign_url_expire": "Sign url expire"
+  },
+  "Doubao": {
+    "cookie": "Cookie",
+    "root_folder_id": "Root folder id"
   },
   "Dropbox": {
     "client_id": "Client id",
@@ -1077,6 +1083,7 @@
     "Cloudreve": {},
     "Crypt": {},
     "Doge": {},
+    "Doubao": {},
     "Dropbox": {},
     "FTP": {},
     "FebBox": {},
@@ -1155,6 +1162,7 @@
     "Cloudreve": "Cloudreve",
     "Crypt": "Crypt",
     "Doge": "Doge",
+    "Doubao": "Doubao",
     "Dropbox": "Dropbox",
     "FTP": "FTP",
     "FebBox": "FebBox",
