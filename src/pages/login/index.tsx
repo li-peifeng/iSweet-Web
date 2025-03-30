@@ -158,7 +158,10 @@ const Login = () => {
         handleRespWithoutNotify(resp, (data) => {
           notify.success(t("login.success"))
           changeToken(data.token)
-          window.location.href = "/"
+          to(
+            decodeURIComponent(searchParams.redirect || base_path || "/"),
+            true,
+          )
         })
       } catch (error: unknown) {
         if (error instanceof Error && error.name != "AbortError")
@@ -181,7 +184,10 @@ const Login = () => {
         (data) => {
           notify.success(t("login.success"))
           changeToken(data.token)
-          window.location.href = "/"
+          to(
+            decodeURIComponent(searchParams.redirect || base_path || "/"),
+            true,
+          )
         },
         (msg, code) => {
           if (!needOpt() && code === 402) {
@@ -293,7 +299,10 @@ const Login = () => {
               colorScheme="danger"
               onClick={() => {
                 changeToken()
-                window.location.href = "/"
+                to(
+                  decodeURIComponent(searchParams.redirect || base_path || "/"),
+                  true,
+                )
               }}
             >
               {t("login.use_guest")}

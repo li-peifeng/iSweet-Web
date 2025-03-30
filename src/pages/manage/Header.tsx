@@ -38,7 +38,7 @@ const Header = () => {
     handleResp(await logOutReq(), () => {
       changeToken()
       notify.success(t("manage.logout_success"))
-      window.location.href = "/"
+      to(`/@login?redirect=${encodeURIComponent(location.pathname)}`)
     })
   }
   return (
