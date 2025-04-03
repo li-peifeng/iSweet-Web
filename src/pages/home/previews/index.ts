@@ -123,7 +123,7 @@ const previews: Preview[] = [
   },
   {
     name: "压缩文档",
-    exts: () => {
+    exts: (name: string) => {
       const index = UserPermissions.findIndex(
         (item) => item === "read_archives",
       )
