@@ -87,6 +87,8 @@
     "cloud_id": "Cloud id",
     "custom_upload_part_size": "Custom upload part size",
     "custom_upload_part_size-tips": "0 for auto",
+    "report_real_size": "Report real size",
+    "report_real_size-tips": "Enable to report the real file size during upload",
     "root_folder_id": "Root folder id",
     "type": "Type",
     "types": {
@@ -240,6 +242,16 @@
     "share_id": "Share id",
     "share_pwd": "Share pwd"
   },
+  "Azure Blob Storage": {
+    "access_key": "Access key",
+    "access_key-tips": "The access key for Azure Storage, used for authentication. https://learn.microsoft.com/azure/storage/common/storage-account-keys-manage",
+    "container_name": "Container name",
+    "container_name-tips": "The name of the container in Azure Storage (created in the Azure portal). https://learn.microsoft.com/azure/storage/blobs/blob-containers-portal",
+    "endpoint": "Endpoint",
+    "endpoint-tips": "e.g. https://accountname.blob.core.windows.net/. The full endpoint URL for Azure Storage, including the unique storage account name (3 ~ 24 numbers and lowercase letters only).",
+    "sign_url_expire": "Sign url expire",
+    "sign_url_expire-tips": "The expiration time for SAS URLs, in hours."
+  },
   "BaiduNetdisk": {
     "client_id": "Client id",
     "client_secret": "Client secret",
@@ -249,9 +261,11 @@
     "download_api": "Download api",
     "download_apis": {
       "crack": "Crack",
+      "crack_video": "Crack video",
       "official": "Official"
     },
     "low_bandwith_upload_mode": "Low bandwith upload mode",
+    "only_list_video_file": "Only list video file",
     "order_by": "Order by",
     "order_bys": {
       "name": "Name",
@@ -481,6 +495,12 @@
   "IPFS API": {
     "endpoint": "Endpoint",
     "gateway": "Gateway",
+    "mode": "Mode",
+    "modes": {
+      "ipfs": "Ipfs",
+      "ipns": "Ipns",
+      "mfs": "Mfs"
+    },
     "root_folder_path": "Root folder path"
   },
   "KodBox": {
@@ -1076,6 +1096,7 @@
     },
     "AliyundriveOpen": {},
     "AliyundriveShare": {},
+    "Azure Blob Storage": {},
     "BaiduNetdisk": {},
     "BaiduPhoto": {},
     "BaiduShare": {},
@@ -1155,6 +1176,7 @@
     "Aliyundrive": "Aliyundrive",
     "AliyundriveOpen": "AliyundriveOpen",
     "AliyundriveShare": "AliyundriveShare",
+    "Azure Blob Storage": "Azure Blob Storage",
     "BaiduNetdisk": "BaiduNetdisk",
     "BaiduPhoto": "BaiduPhoto",
     "BaiduShare": "BaiduShare",
