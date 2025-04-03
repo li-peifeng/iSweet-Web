@@ -31,8 +31,8 @@
     },
     "order_direction": "排序方式",
     "order_directions": {
-      "asc": "升序",
-      "desc": "降序"
+      "asc": "遞增排序",
+      "desc": "遞減排序"
     },
     "refresh_token": "更新 Token",
     "root_folder_id": "根資料夾ID"
@@ -86,7 +86,9 @@
     "authorization": "Authorization",
     "cloud_id": "Cloud id",
     "custom_upload_part_size": "自定義上傳分片大小",
-    "custom_upload_part_size-tips": "0 表示根據 VIP 等級對應大小",
+    "custom_upload_part_size-tips": "0 為自動設置",
+    "report_real_size": "報告實際尺寸",
+    "report_real_size-tips": "啟用上傳過程中報告實際檔案大小",
     "root_folder_id": "根資料夾ID",
     "type": "類型",
     "types": {
@@ -144,6 +146,7 @@
     "url": "連結"
   },
   "AList V3": {
+    "forward_archive_requests": "轉送存檔請求",
     "meta_password": "元信息密碼",
     "pass_ua_to_upsteam": "傳遞UA至上游",
     "password": "密碼",
@@ -159,7 +162,8 @@
     "download_part_size-tips": "Need to enable proxy. Unit: KB",
     "paths": "路徑",
     "protect_same_name": "保護同名",
-    "protect_same_name-tips": "保護同名的文件不被刪除或重命名"
+    "protect_same_name-tips": "保護同名的文件不被刪除或重命名",
+    "writable": "可寫"
   },
   "Aliyundrive": {
     "internal_upload": "內部上傳",
@@ -238,6 +242,16 @@
     "share_id": "分享ID",
     "share_pwd": "分享密碼"
   },
+  "Azure Blob Storage": {
+    "access_key": "Access key",
+    "access_key-tips": "The access key for Azure Storage, used for authentication. https://learn.microsoft.com/azure/storage/common/storage-account-keys-manage",
+    "container_name": "Container name",
+    "container_name-tips": "The name of the container in Azure Storage (created in the Azure portal). https://learn.microsoft.com/azure/storage/blobs/blob-containers-portal",
+    "endpoint": "Endpoint",
+    "endpoint-tips": "e.g. https://accountname.blob.core.windows.net/. The full endpoint URL for Azure Storage, including the unique storage account name (3 ~ 24 numbers and lowercase letters only).",
+    "sign_url_expire": "簽名連結有效期",
+    "sign_url_expire-tips": "The expiration time for SAS URLs, in hours."
+  },
   "BaiduNetdisk": {
     "client_id": "客户端ID",
     "client_secret": "Client 金鑰",
@@ -247,6 +261,7 @@
     "download_api": "下載 API",
     "download_apis": {
       "crack": "非官方",
+      "crack_video": "Crack video",
       "official": "官方"
     },
     "low_bandwith_upload_mode": "低帶寬上傳模式",
@@ -357,6 +372,10 @@
     "session_token": "會話令牌",
     "sign_url_expire": "簽名連結有效期"
   },
+  "Doubao": {
+    "cookie": "Cookie",
+    "root_folder_id": "根資料夾ID"
+  },
   "Dropbox": {
     "client_id": "客户端 ID",
     "client_id-tips": "如果你沒有，請留空",
@@ -394,7 +413,7 @@
     "user_ip-tips": "user ip address for download link which can speed up the download"
   },
   "FeijiPan": {
-    "ip": "IP",
+    "ip": "Ip",
     "password": "密碼",
     "root_folder_id": "根資料夾ID",
     "username": "使用者名稱"
@@ -467,7 +486,7 @@
     "upload_thread-tips": "1 <= thread <= 32"
   },
   "ILanZou": {
-    "ip": "IP",
+    "ip": "Ip",
     "password": "密碼",
     "root_folder_id": "根資料夾ID",
     "username": "使用者名稱"
@@ -475,6 +494,12 @@
   "IPFS API": {
     "endpoint": "Endpoint",
     "gateway": "閘道",
+    "mode": "Mode",
+    "modes": {
+      "ipfs": "Ipfs",
+      "ipns": "Ipns",
+      "mfs": "Mfs"
+    },
     "root_folder_path": "根資料夾路徑"
   },
   "KodBox": {
@@ -1070,6 +1095,7 @@
     },
     "AliyundriveOpen": {},
     "AliyundriveShare": {},
+    "Azure Blob Storage": {},
     "BaiduNetdisk": {},
     "BaiduPhoto": {},
     "BaiduShare": {},
@@ -1077,6 +1103,7 @@
     "Cloudreve": {},
     "Crypt": {},
     "Doge": {},
+    "Doubao": {},
     "Dropbox": {},
     "FTP": {},
     "FebBox": {},
@@ -1134,7 +1161,7 @@
   },
   "drivers": {
     "115 Cloud": "115 網盤",
-    "115 Open": "115 開放平台",
+    "115 Open": "115 Open",
     "115 Share": "115 雲盤分享",
     "123Pan": "123雲盤",
     "123PanLink": "123雲盤直鏈",
@@ -1148,6 +1175,7 @@
     "Aliyundrive": "阿里雲盤",
     "AliyundriveOpen": "阿里雲盤Open",
     "AliyundriveShare": "阿里雲盤分享",
+    "Azure Blob Storage": "Azure Blob Storage",
     "BaiduNetdisk": "百度網盤",
     "BaiduPhoto": "一刻相册",
     "BaiduShare": "百度分享",
@@ -1155,6 +1183,7 @@
     "Cloudreve": "Cloudreve",
     "Crypt": "Crypt",
     "Doge": "多吉雲",
+    "Doubao": "Doubao",
     "Dropbox": "Dropbox",
     "FTP": "FTP",
     "FebBox": "FebBox",
