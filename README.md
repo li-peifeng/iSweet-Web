@@ -1,17 +1,17 @@
 <div align="center">
   <a href="https://peifeng.li"><img width="100px" alt="logo" src="https://is.peifeng.li/logo.png"/></a>
 <div>
-  <a href="https://github.com/li-peifeng/isweet/actions?query=workflow%3ABuild">
+  <a href="https://github.com/li-peifeng/isweet/actions?query=workflow:Build">
     <img src="https://img.shields.io/github/actions/workflow/status/li-peifeng/isweet/build.yml?branch=main" alt="Build status" />
   </a>
   <a href="https://github.com/li-peifeng/isweet/releases">
     <img src="https://img.shields.io/github/release/li-peifeng/isweet" alt="latest version" />
   </a>
   <a href="https://hub.docker.com/r/leolitaly/isweet">
-    <img src="https://img.shields.io/docker/pulls/leolitaly/isweet?color=%2348BB78&logo=docker&label=pulls" alt="Downloads" />
+    <img src="https://img.shields.io/docker/pulls/leolitaly/isweet?color=#48BB78&logo=docker&label=pulls" alt="Downloads" />
   </a>
   <a href="https://github.com/li-peifeng/isweet/releases">
-    <img src="https://img.shields.io/github/downloads/li-peifeng/isweet/total?color=%239F7AEA&logo=github" alt="Downloads" />
+    <img src="https://img.shields.io/github/downloads/li-peifeng/isweet/total?color=#9F7AEA&logo=github" alt="Downloads" />
   </a>
 </div>
 
