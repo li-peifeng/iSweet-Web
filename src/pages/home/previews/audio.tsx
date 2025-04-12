@@ -37,15 +37,13 @@ const Preview = () => {
     if (coverObj) {
       cover = rawLink(coverObj, true)
     } else {
-      cover =
-        getSetting("audio_cover") ||
-        "https://jsd.nn.ci/gh/alist-org/logo@main/logo.svg"
+      cover = getSetting("audio_cover") || "/images/audio.png"
     }
     const audio = {
       name: obj.name,
       artist: "•••",
       url: rawLink(obj, true),
-      cover: cover || "/images/audio.png",
+      cover: cover,
       lrc: lrc,
     }
     if (objStore.provider === "NeteaseMusic") {
