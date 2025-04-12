@@ -71,6 +71,9 @@ importers:
       hls.js:
         specifier: ^1.6.1
         version: 1.6.1
+      iphotos:
+        specifier: ^1.0.0
+        version: 1.0.0
       just-once:
         specifier: ^2.2.0
         version: 2.2.0
@@ -345,15 +348,6 @@ packages:
   '@crowdin/cli@3.7.10':
     resolution: {integrity: sha512-L0sjeEv4bn7LHNYsKxl2aTrah16u1ThufN0xvMMH7o53lD29llvVfAD9jVOttSl/kyQ+mMDY8GLzjPRNFdLJqQ==}
     hasBin: true
-
-  '@egjs/component@3.0.5':
-    resolution: {integrity: sha512-cLcGizTrrUNA2EYE3MBmEDt2tQv1joVP1Q3oDisZ5nw0MZDx2kcgEXM+/kZpfa/PAkFvYVhRUZwytIQWoN3V/w==}
-
-  '@egjs/imready@1.4.1':
-    resolution: {integrity: sha512-JIOBs4lB7FYdsKi5uvz2j3SObX8eShtZjtqlOH41tm185aJOQZwiKBK8+V4MxzG4X6DqVhpdN8UcuVwBbElfsg==}
-
-  '@egjs/view360@4.0.0-beta.7':
-    resolution: {integrity: sha512-prVTTxuQ1/k59NM7G0tm58k2vPHGoaExoFr5E7MoJaSGF56Otj4okQHAxxosXH87aQLN0feZMtBlsKz0b/7zEw==}
 
   '@esbuild/android-arm64@0.18.20':
     resolution: {integrity: sha512-Nz4rJcchGDtENV0eMKUNa6L12zz2zBDXuhj/Vjh18zGqB44Bi7MBMSXjgunJgjRhCmKOjnPuZp4Mb6OKqtMHLQ==}
@@ -2285,20 +2279,6 @@ snapshots:
       shelljs: 0.8.5
     transitivePeerDependencies:
       - encoding
-
-  '@egjs/component@3.0.5': {}
-
-  '@egjs/imready@1.4.1':
-    dependencies:
-      '@cfcs/core': 0.0.24
-      '@egjs/component': 3.0.5
-
-  '@egjs/view360@4.0.0-beta.7':
-    dependencies:
-      '@egjs/component': 3.0.5
-      '@egjs/imready': 1.4.1
-      '@types/webxr': 0.5.19
-      gl-matrix: 3.4.3
 
   '@esbuild/android-arm64@0.18.20':
     optional: true
