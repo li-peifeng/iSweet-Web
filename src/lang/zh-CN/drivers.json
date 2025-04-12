@@ -375,7 +375,8 @@
   },
   "Doubao": {
     "cookie": "Cookie",
-    "root_folder_id": "根文件夹ID"
+    "root_folder_id": "根文件夹ID",
+    "upload_thread": "上传线程"
   },
   "Dropbox": {
     "client_id": "客户端ID",
@@ -815,6 +816,9 @@
   },
   "Thunder": {
     "captcha_token": "验证码",
+    "credit_key": "信用密钥",
+    "credit_key-tips": "信用密钥，用于登录",
+    "device_id": "设备id",
     "password": "密码",
     "root_folder_id": "根文件夹ID",
     "username": "用户名"
@@ -841,6 +845,8 @@
     "client_id": "客户端ID",
     "client_secret": "客户端密钥",
     "client_version": "客户端版本",
+    "credit_key": "信用密钥",
+    "credit_key-tips": "信用密钥，用于登录",
     "device_id": "设备id",
     "download_user_agent": "下载用户代理",
     "login_type": "登录类型",
@@ -882,6 +888,8 @@
     "client_id": "客户端ID",
     "client_secret": "客户端密钥",
     "client_version": "客户端版本",
+    "credit_key": "信用密钥",
+    "credit_key-tips": "信用密钥，用于登录",
     "device_id": "设备id",
     "download_user_agent": "下载用户代理",
     "login_type": "登录类型",
@@ -923,6 +931,8 @@
     "client_id": "客户端ID",
     "client_secret": "客户端密钥",
     "client_version": "客户端版本",
+    "credit_key": "信用密钥",
+    "credit_key-tips": "信用密钥，用于登录",
     "device_id": "设备id",
     "download_user_agent": "下载用户代理",
     "login_type": "登录类型",

@@ -1,7 +1,7 @@
 import { Box } from "@hope-ui/solid"
 import { createSignal, onCleanup, onMount } from "solid-js"
 import { useRouter, useLink } from "~/hooks"
-import { getSettingBool, objStore } from "~/store"
+import { getMainColor, getSettingBool, objStore } from "~/store"
 import { ObjType } from "~/types"
 import { ext, pathDir, pathJoin } from "~/utils"
 import Artplayer from "artplayer"
@@ -10,7 +10,7 @@ import { type Setting } from "artplayer/types/setting"
 import { type Events } from "artplayer/types/events"
 import artplayerPluginDanmuku from "artplayer-plugin-danmuku"
 import artplayerPluginAss from "~/components/artplayer-plugin-ass"
-import flvjs from "flv.js"
+import mpegts from "mpegts.js"
 import Hls from "hls.js"
 import { currentLang } from "~/app/i18n"
 import { AutoHeightPlugin, VideoBox } from "./video_box"
@@ -46,7 +46,7 @@ const Preview = () => {
     }
   }
   let player: Artplayer
-  let flvPlayer: flvjs.Player
+  let flvPlayer: mpegts.Player
   let hlsPlayer: Hls
   let option: Option = {
     id: pathname(),
@@ -61,6 +61,7 @@ const Preview = () => {
     flip: true,
     playbackRate: true,
     aspectRatio: true,
+    screenshot: true,
     setting: true,
     hotkey: true,
     pip: true,
@@ -70,6 +71,32 @@ const Preview = () => {
     subtitleOffset: true,
     miniProgressBar: false,
     playsInline: true,
+    theme: getMainColor(),
+    // layers: [],
+    // settings: [],
+    // contextmenu: [],
+    controls: [
+      {
+        name: "previous-button",
+        index: 10,
+        position: "left",
+        html: '<svg fill="none" stroke-width="2" xmlns="http://www.w3.org/2000/svg" height="22" width="22" class="icon icon-tabler icon-tabler-player-track-prev-filled" width="1em" height="1em" viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="overflow: visible; color: currentcolor;"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" stroke-width="0" fill="currentColor"></path><path d="M9.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" stroke-width="0" fill="currentColor"></path></svg>',
+        tooltip: "Previous",
+        click: function () {
+          previous_video()
+        },
+      },
+      {
+        name: "next-button",
+        index: 11,
+        position: "left",
+        html: '<svg fill="none" stroke-width="2" xmlns="http://www.w3.org/2000/svg" height="22" width="22" class="icon icon-tabler icon-tabler-player-track-next-filled" width="1em" height="1em" viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="overflow: visible; color: currentcolor;"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M2 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" stroke-width="0" fill="currentColor"></path><path d="M13 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" stroke-width="0" fill="currentColor"></path></svg>',
+        tooltip: "Next",
+        click: function () {
+          next_video()
+        },
+      },
+    ],
     quality: [],
     // highlight: [],
     plugins: [AutoHeightPlugin],
@@ -80,11 +107,12 @@ const Preview = () => {
       // @ts-ignore
       "webkit-playsinline": true,
       playsInline: true,
+      crossOrigin: "anonymous",
     },
     type: ext(objStore.obj.name),
     customType: {
       flv: function (video: HTMLMediaElement, url: string) {
-        flvPlayer = flvjs.createPlayer(
+        flvPlayer = mpegts.createPlayer(
           {
             type: "flv",
             url: url,
@@ -257,12 +285,9 @@ const Preview = () => {
         mode: 0,
         margin: [0, "0%"],
         antiOverlap: false,
-        useWorker: true,
         synchronousPlayback: false,
         lockTime: 5,
         maxLength: 100,
-        minWidth: 200,
-        maxWidth: 400,
         theme: "dark",
         heatmap: true,
       }),

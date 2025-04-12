@@ -3,8 +3,8 @@ import "./audio.css"
 import APlayer from "aplayer"
 import { Box } from "@hope-ui/solid"
 import { onCleanup, onMount } from "solid-js"
-import { useLink, useRouter } from "~/hooks"
-import { getSetting, getSettingBool, objStore } from "~/store"
+import { useLink, useRouter, useTitle } from "~/hooks"
+import { getMainColor, getSetting, getSettingBool, objStore } from "~/store"
 import { ObjType, StoreObj } from "~/types"
 import { baseName, fsGet } from "~/utils"
 
@@ -24,11 +24,28 @@ const Preview = () => {
     if (lrcObj) {
       lrc = proxyLink(lrcObj, true)
     }
+    let cover = undefined
+    const coverObj = objStore.objs.find((o) => {
+      return (
+        o.type === ObjType.IMAGE &&
+        (baseName(o.name).toLowerCase() === baseName(obj.name).toLowerCase() ||
+          baseName(o.name).toLowerCase() === "front" ||
+          baseName(o.name).toLowerCase() === "cover" ||
+          baseName(o.name).toLowerCase() === "folder")
+      )
+    })
+    if (coverObj) {
+      cover = rawLink(coverObj, true)
+    } else {
+      cover =
+        getSetting("audio_cover") ||
+        "https://jsd.nn.ci/gh/alist-org/logo@main/logo.svg"
+    }
     const audio = {
       name: obj.name,
       artist: "•••",
       url: rawLink(obj, true),
-      cover: getSetting("audio_cover") || "/images/audio.png",
+      cover: cover || "/images/audio.png",
       lrc: lrc,
     }
     if (objStore.provider === "NeteaseMusic") {
@@ -45,6 +62,7 @@ const Preview = () => {
       container: document.querySelector("#audio-player"),
       mini: false,
       autoplay: getSettingBool("audio_autoplay"),
+      theme: getMainColor(),
       loop: "all",
       order: "list",
       preload: "auto",
@@ -72,6 +90,32 @@ const Preview = () => {
     const curIndex = audios.findIndex((obj) => obj.name === objStore.obj.name)
     if (curIndex !== -1) {
       ap.list.switch(curIndex)
+    }
+    if ("mediaSession" in navigator) {
+      navigator.mediaSession.setActionHandler("seekto", (evt) =>
+        ap.seek(evt.seekTime),
+      )
+      if (ap.list.audios.length > 1) {
+        navigator.mediaSession.setActionHandler("previoustrack", () => {
+          ap.skipBack()
+        })
+        navigator.mediaSession.setActionHandler("nexttrack", () => {
+          ap.skipForward()
+        })
+      }
+      ap.on("play", () => {
+        const current = ap.list.audios[ap.list.index]
+        useTitle(current.name)
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: current.name,
+          artist: current.artist === "Unknown" ? undefined : current.artist,
+          artwork: [
+            {
+              src: current.cover,
+            },
+          ],
+        })
+      })
     }
   })
   onCleanup(() => {

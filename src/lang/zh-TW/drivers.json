@@ -374,7 +374,8 @@
   },
   "Doubao": {
     "cookie": "Cookie",
-    "root_folder_id": "根資料夾ID"
+    "root_folder_id": "根資料夾ID",
+    "upload_thread": "上傳線程"
   },
   "Dropbox": {
     "client_id": "客户端 ID",
@@ -810,6 +811,9 @@
   },
   "Thunder": {
     "captcha_token": "驗證碼",
+    "credit_key": "信用密鑰",
+    "credit_key-tips": "信用密鑰，用於登入",
+    "device_id": "設備id",
     "password": "密碼",
     "root_folder_id": "根文件夾ID",
     "username": "使用者名稱"
@@ -836,6 +840,8 @@
     "client_id": "客户端ID",
     "client_secret": "客戶端金鑰",
     "client_version": "客户端版本",
+    "credit_key": "信用密鑰",
+    "credit_key-tips": "信用密鑰，用於登入",
     "device_id": "設備id",
     "download_user_agent": "下載使用者 Proxy 代理",
     "login_type": "登入類型",
@@ -877,6 +883,8 @@
     "client_id": "客户端ID",
     "client_secret": "客戶端金鑰",
     "client_version": "客户端版本",
+    "credit_key": "信用密鑰",
+    "credit_key-tips": "信用密鑰，用於登入",
     "device_id": "設備id",
     "download_user_agent": "下載使用者 Proxy 代理",
     "login_type": "登入類型",
@@ -918,6 +926,8 @@
     "client_id": "客户端ID",
     "client_secret": "客戶端金鑰",
     "client_version": "客户端版本",
+    "credit_key": "信用密鑰",
+    "credit_key-tips": "信用密鑰，用於登入",
     "device_id": "設備id",
     "download_user_agent": "下載使用者 Proxy 代理",
     "login_type": "登入類型",
