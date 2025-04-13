@@ -1,12 +1,14 @@
 /* music 圆角 */
 #audio-player {
-  border-radius: 10px !important;
+  border-radius: 0.5em !important;
 }
 
 /* music PIC 透明圆角 */
-.aplayer-pic {
+.aplayer .aplayer-pic {
   background-color: #ffffff00 !important;
   border-radius: 0.5em !important;
+  height: 85px !important;
+  width: 85px !important;
 }
 
 /* music 背景透明 */
