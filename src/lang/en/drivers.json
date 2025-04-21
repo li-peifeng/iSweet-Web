@@ -378,6 +378,11 @@
     "root_folder_id": "Root folder id",
     "upload_thread": "Upload thread"
   },
+  "DoubaoShare": {
+    "cookie": "Cookie",
+    "root_folder_path": "Root folder path",
+    "share_ids": "Share ids"
+  },
   "Dropbox": {
     "client_id": "Client id",
     "client_id-tips": "Keep it empty if you don't have one",
@@ -1111,6 +1116,7 @@
     "Crypt": {},
     "Doge": {},
     "Doubao": {},
+    "DoubaoShare": {},
     "Dropbox": {},
     "FTP": {},
     "FebBox": {},
@@ -1191,6 +1197,7 @@
     "Crypt": "Crypt",
     "Doge": "Doge",
     "Doubao": "Doubao",
+    "DoubaoShare": "DoubaoShare",
     "Dropbox": "Dropbox",
     "FTP": "FTP",
     "FebBox": "FebBox",
