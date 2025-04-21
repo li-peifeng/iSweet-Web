@@ -378,6 +378,11 @@
     "root_folder_id": "根文件夹ID",
     "upload_thread": "上传线程"
   },
+  "DoubaoShare": {
+    "cookie": "Cookie",
+    "root_folder_path": "根文件夹路径",
+    "share_ids": "共享 ids"
+  },
   "Dropbox": {
     "client_id": "客户端ID",
     "client_id-tips": "如果你没有，请留空",
@@ -1119,6 +1124,7 @@
     "Crypt": {},
     "Doge": {},
     "Doubao": {},
+    "DoubaoShare": {},
     "Dropbox": {},
     "FTP": {},
     "FebBox": {},
@@ -1199,6 +1205,7 @@
     "Crypt": "Crypt",
     "Doge": "多吉云",
     "Doubao": "豆包",
+    "DoubaoShare": "豆包共享",
     "Dropbox": "Dropbox",
     "FTP": "FTP",
     "FebBox": "FebBox",

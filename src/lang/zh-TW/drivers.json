@@ -377,6 +377,11 @@
     "root_folder_id": "根資料夾ID",
     "upload_thread": "上傳線程"
   },
+  "DoubaoShare": {
+    "cookie": "Cookie",
+    "root_folder_path": "根資料夾路徑",
+    "share_ids": "分享 ids"
+  },
   "Dropbox": {
     "client_id": "客户端 ID",
     "client_id-tips": "如果你沒有，請留空",
@@ -1114,6 +1119,7 @@
     "Crypt": {},
     "Doge": {},
     "Doubao": {},
+    "DoubaoShare": {},
     "Dropbox": {},
     "FTP": {},
     "FebBox": {},
@@ -1194,6 +1200,7 @@
     "Crypt": "Crypt",
     "Doge": "多吉雲",
     "Doubao": "Doubao",
+    "DoubaoShare": "Doubao分享",
     "Dropbox": "Dropbox",
     "FTP": "FTP",
     "FebBox": "FebBox",
@@ -1208,7 +1215,7 @@
     "KodBox": "KodBox",
     "Lanzou": "藍奏雲",
     "Lark": "Lark",
-    "LenovoNasShare": "LenovoNasShare",
+    "LenovoNasShare": "LenovoNas分享",
     "Local": "本機儲存",
     "MediaTrack": "媒體軌",
     "Mega_nz": "Mega 網盤",
