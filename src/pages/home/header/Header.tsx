@@ -54,7 +54,7 @@ export const Header = () => {
         >
           <HStack
             class="header-left"
-            h="56px"
+            h="48px"
             as={Link}
             href={UserMethods.is_guest(me()) ? "/@login" : "/@manage"}
           >
