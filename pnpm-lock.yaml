@@ -72,8 +72,8 @@ importers:
         specifier: ^1.6.1
         version: 1.6.1
       iphotos:
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^2.8.3
+        version: 2.8.3
       just-once:
         specifier: ^2.2.0
         version: 2.2.0
@@ -1181,8 +1181,8 @@ packages:
     resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
     engines: {node: '>= 0.10'}
 
-  iphotos@1.0.0:
-    resolution: {integrity: sha512-ZN8/TWXeqzRbD9gNIl4dS2YFowDB3urBbltK9GrRwzi/bxzLO0RLNhav6Q/g+CKUUiIMICSF7pbZVLQSWmJWRQ==}
+  iphotos@2.8.3:
+    resolution: {integrity: sha512-f78aTFFYzCoepF9q/tkQOl7aryC8uOks671EEc256Tz1iMXhsYP/MfOs0uvZznum3w2qJnytmWufsgGsjX3YOQ==}
     engines: {node: '>=6.0.0'}
 
   is-buffer@2.0.5:
@@ -3094,7 +3094,7 @@ snapshots:
 
   interpret@1.4.0: {}
 
-  iphotos@1.0.0: {}
+  iphotos@2.8.3: {}
 
   is-buffer@2.0.5: {}
 
