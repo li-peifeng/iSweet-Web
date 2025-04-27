@@ -96,7 +96,9 @@
       "group": "Group",
       "personal": "個人雲",
       "personal_new": "新的個人盤"
-    }
+    },
+    "use_large_thumbnail": "使用大縮圖",
+    "use_large_thumbnail-tips": "啟用影像的大縮圖"
   },
   "189Cloud": {
     "cookie": "Cookie",
