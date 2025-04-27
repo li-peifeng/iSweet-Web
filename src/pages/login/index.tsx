@@ -132,7 +132,6 @@ const Login = () => {
     AuthnSignal?.abort()
     const controller = new AbortController()
     AuthnSignal = controller
-    changeToken()
     const username_login: string = conditional ? "" : username()
     if (!conditional && remember() === "true") {
       localStorage.setItem("username", username())

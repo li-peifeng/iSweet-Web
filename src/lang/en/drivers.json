@@ -96,7 +96,9 @@
       "group": "Group",
       "personal": "Personal",
       "personal_new": "Personal new"
-    }
+    },
+    "use_large_thumbnail": "Use large thumbnail",
+    "use_large_thumbnail-tips": "Enable to use large thumbnail for images"
   },
   "189Cloud": {
     "cookie": "Cookie",
@@ -375,6 +377,11 @@
   },
   "Doubao": {
     "cookie": "Cookie",
+    "download_api": "Download api",
+    "download_apis": {
+      "get_download_info": "Get download info",
+      "get_file_url": "Get file url"
+    },
     "root_folder_id": "Root folder id",
     "upload_thread": "Upload thread"
   },
