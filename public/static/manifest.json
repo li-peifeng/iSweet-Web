@@ -5,7 +5,7 @@
   "name": "甜蜜云",
   "icons": [
     {
-      "src": "https://cdn.jsdelivr.net/gh/li-peifeng/cdn/logo.png",
+      "src": "https://cdn.jsdelivr.net/gh/li-peifeng/static/logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
