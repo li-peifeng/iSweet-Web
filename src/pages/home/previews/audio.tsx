@@ -37,7 +37,7 @@ const Preview = () => {
     if (coverObj) {
       cover = rawLink(coverObj, true)
     } else {
-      cover = getSetting("audio_cover") || "/images/audio.png"
+      cover = obj.thumb || getSetting("audio_cover") || "/images/audio.png"
     }
     const audio = {
       name: obj.name,

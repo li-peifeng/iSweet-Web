@@ -12,7 +12,7 @@ import {
   Checkbox,
   Icon,
 } from "@hope-ui/solid"
-import { createMemo, createSignal, Show, onMount } from "solid-js"
+import { createMemo, createSignal, Show, onMount, onCleanup } from "solid-js"
 import { SwitchColorMode, SwitchLanguageWhite } from "~/components"
 import { useFetch, useT, useTitle, useRouter } from "~/hooks"
 import {
@@ -168,6 +168,18 @@ const Login = () => {
       }
     })
   }
+  const AuthnCleanUpHandler = () => AuthnSignal?.abort()
+  onMount(() => {
+    if (AuthnSignEnabled) {
+      window.addEventListener("beforeunload", AuthnCleanUpHandler)
+      AuthnLogin(true)
+    }
+  })
+  onCleanup(() => {
+    AuthnSignal?.abort()
+    window.removeEventListener("beforeunload", AuthnCleanUpHandler)
+  })
+
   const Login = async () => {
     if (!useauthn()) {
       if (remember() === "true") {
@@ -206,10 +218,6 @@ const Login = () => {
   if (ldapLoginEnabled) {
     setUseLdap(true)
   }
-
-  onMount(() => {
-    AuthnLogin(true)
-  })
 
   return (
     <Center zIndex="1" w="$full" h="100vh">

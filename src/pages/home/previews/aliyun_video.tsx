@@ -327,6 +327,14 @@ const Preview = () => {
       })
       interval = window.setInterval(resetPlayUrl, 1000 * 60 * 14)
     })
+    player.on("error", () => {
+      if (player.video.crossOrigin) {
+        console.log(
+          "Error detected. Trying to remove Cross-Origin attribute. Screenshot may not be available.",
+        )
+        player.video.crossOrigin = null
+      }
+    })
   })
   let interval: number
   let curSeek: number
