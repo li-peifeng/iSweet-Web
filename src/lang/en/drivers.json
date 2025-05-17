@@ -22,6 +22,8 @@
     "root_folder_id": "Root folder id"
   },
   "115 Open": {
+    "limit_rate": "Limit rate",
+    "limit_rate-tips": "limit all api request rate ([limit]r/1s)",
     "order_by": "Order by",
     "order_bys": {
       "file_name": "File name",
