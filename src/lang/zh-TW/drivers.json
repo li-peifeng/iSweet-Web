@@ -22,6 +22,8 @@
     "root_folder_id": "根資料夾ID"
   },
   "115 Open": {
+    "limit_rate": "次數限制",
+    "limit_rate-tips": "限制所有 API 次數上限 (1r/[limit_rate])",
     "order_by": "排序",
     "order_bys": {
       "file_name": "名稱",
