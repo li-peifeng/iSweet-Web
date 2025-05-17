@@ -22,6 +22,8 @@
     "root_folder_id": "根文件夹ID"
   },
   "115 Open": {
+    "limit_rate": "限制速率",
+    "limit_rate-tips": "限制所有api请求速率（[limit]r/1s）",
     "order_by": "排序",
     "order_bys": {
       "file_name": "名称",
