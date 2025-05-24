@@ -322,6 +322,30 @@
     "root_folder_path": "Root folder path",
     "username": "Username"
   },
+  "Cloudreve V4": {
+    "access_token": "Access token",
+    "address": "Address",
+    "custom_ua": "Custom ua",
+    "enable_folder_size": "Enable folder size",
+    "enable_thumb": "Enable thumb",
+    "enable_version_upload": "Enable version upload",
+    "order_by": "Order by",
+    "order_bys": {
+      "created_at": "Created at",
+      "name": "Name",
+      "size": "Size",
+      "updated_at": "Updated at"
+    },
+    "order_direction": "Order direction",
+    "order_directions": {
+      "asc": "Asc",
+      "desc": "Desc"
+    },
+    "password": "Password",
+    "refresh_token": "Refresh token",
+    "root_folder_path": "Root folder path",
+    "username": "Username"
+  },
   "Crypt": {
     "directory_name_encryption": "Directory name encryption",
     "directory_name_encryptions": {
@@ -1122,6 +1146,7 @@
     "BaiduShare": {},
     "ChaoXingGroupDrive": {},
     "Cloudreve": {},
+    "Cloudreve V4": {},
     "Crypt": {},
     "Doge": {},
     "Doubao": {},
@@ -1203,6 +1228,7 @@
     "BaiduShare": "BaiduShare",
     "ChaoXingGroupDrive": "ChaoXingGroupDrive",
     "Cloudreve": "Cloudreve",
+    "Cloudreve V4": "Cloudreve V4",
     "Crypt": "Crypt",
     "Doge": "Doge",
     "Doubao": "Doubao",
